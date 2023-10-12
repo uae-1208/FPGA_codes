@@ -1,0 +1,11 @@
+|LED
+key1 => led1.DATAIN
+key2 => led2.DATAIN
+key3 => led3.DATAIN
+key4 => led4.DATAIN
+led1 << key1.DB_MAX_OUTPUT_PORT_TYPE
+led2 << key2.DB_MAX_OUTPUT_PORT_TYPE
+led3 << key3.DB_MAX_OUTPUT_PORT_TYPE
+led4 << key4.DB_MAX_OUTPUT_PORT_TYPE
+
+

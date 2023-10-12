@@ -1,0 +1,185 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Full Version"
+
+// DATE "10/08/2023 19:15:20"
+
+// 
+// Device: Altera EP4CE10F17C8 Package FBGA256
+// 
+
+// 
+// This Verilog file should be used for ModelSim (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module LED (
+	key1,
+	key2,
+	key3,
+	key4,
+	led1,
+	led2,
+	led3,
+	led4);
+input 	key1;
+input 	key2;
+input 	key3;
+input 	key4;
+output 	led1;
+output 	led2;
+output 	led3;
+output 	led4;
+
+// Design Ports Information
+// led1	=>  Location: PIN_D11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// led2	=>  Location: PIN_C11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// led3	=>  Location: PIN_E10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// led4	=>  Location: PIN_F9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// key1	=>  Location: PIN_E16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// key2	=>  Location: PIN_E15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// key3	=>  Location: PIN_M15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// key4	=>  Location: PIN_M16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("LED_8_1200mv_85c_v_slow.sdo");
+// synopsys translate_on
+
+wire \led1~output_o ;
+wire \led2~output_o ;
+wire \led3~output_o ;
+wire \led4~output_o ;
+wire \key1~input_o ;
+wire \key2~input_o ;
+wire \key3~input_o ;
+wire \key4~input_o ;
+
+
+// Location: IOOBUF_X32_Y24_N23
+cycloneive_io_obuf \led1~output (
+	.i(!\key1~input_o ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\led1~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \led1~output .bus_hold = "false";
+defparam \led1~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X23_Y24_N2
+cycloneive_io_obuf \led2~output (
+	.i(!\key2~input_o ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\led2~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \led2~output .bus_hold = "false";
+defparam \led2~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X28_Y24_N23
+cycloneive_io_obuf \led3~output (
+	.i(!\key3~input_o ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\led3~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \led3~output .bus_hold = "false";
+defparam \led3~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X23_Y24_N16
+cycloneive_io_obuf \led4~output (
+	.i(!\key4~input_o ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\led4~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \led4~output .bus_hold = "false";
+defparam \led4~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y12_N8
+cycloneive_io_ibuf \key1~input (
+	.i(key1),
+	.ibar(gnd),
+	.o(\key1~input_o ));
+// synopsys translate_off
+defparam \key1~input .bus_hold = "false";
+defparam \key1~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y12_N1
+cycloneive_io_ibuf \key2~input (
+	.i(key2),
+	.ibar(gnd),
+	.o(\key2~input_o ));
+// synopsys translate_off
+defparam \key2~input .bus_hold = "false";
+defparam \key2~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y12_N15
+cycloneive_io_ibuf \key3~input (
+	.i(key3),
+	.ibar(gnd),
+	.o(\key3~input_o ));
+// synopsys translate_off
+defparam \key3~input .bus_hold = "false";
+defparam \key3~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y12_N22
+cycloneive_io_ibuf \key4~input (
+	.i(key4),
+	.ibar(gnd),
+	.o(\key4~input_o ));
+// synopsys translate_off
+defparam \key4~input .bus_hold = "false";
+defparam \key4~input .simulate_z_as = "z";
+// synopsys translate_on
+
+assign led1 = \led1~output_o ;
+
+assign led2 = \led2~output_o ;
+
+assign led3 = \led3~output_o ;
+
+assign led4 = \led4~output_o ;
+
+endmodule

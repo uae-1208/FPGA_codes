@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, U:/Projects/FPGA/Examples/1.LED/Sim/LED_TB.v
+source_file = 1, U:/Projects/FPGA/Examples/1.LED/RTL/LED.v
+source_file = 1, U:/Projects/FPGA/Examples/1.LED/Project/db/LED.cbx.xml
+design_name = LED
+instance = comp, \led1~output , led1~output, LED, 1
+instance = comp, \led2~output , led2~output, LED, 1
+instance = comp, \led3~output , led3~output, LED, 1
+instance = comp, \led4~output , led4~output, LED, 1
+instance = comp, \key1~input , key1~input, LED, 1
+instance = comp, \key2~input , key2~input, LED, 1
+instance = comp, \key3~input , key3~input, LED, 1
+instance = comp, \key4~input , key4~input, LED, 1
