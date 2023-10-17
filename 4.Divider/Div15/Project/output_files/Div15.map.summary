@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Oct 12 20:43:38 2023
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : Div15
+Top-level Entity Name : Div15
+Family : Cyclone IV E
+Total logic elements : 8
+    Total combinational functions : 7
+    Dedicated logic registers : 6
+Total registers : 6
+Total pins : 3
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

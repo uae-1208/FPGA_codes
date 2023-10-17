@@ -1,0 +1,62 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/Projects/FPGA/Examples/4.Divider/Div15/Project/simulation/modelsim
+T_opt
+!s110 1697114541
+V_IB]<:42bDQG4XcnE94;F2
+04 8 4 work Div15_TB fast 0
+=1-5405db4d15c6-6527e9ad-55-34e4
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vDiv15
+Z1 !s110 1697114540
+!i10b 1
+!s100 zRnb@MmQ?`30QR4HDYX<]2
+IheJDm`W5W<fC4:3=9@lCZ2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1697114495
+8U:/Projects/FPGA/Examples/4.Divider/Div15/RTL/Div15.v
+FU:/Projects/FPGA/Examples/4.Divider/Div15/RTL/Div15.v
+L0 1
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1697114540.626000
+!s107 U:/Projects/FPGA/Examples/4.Divider/Div15/RTL/Div15.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/4.Divider/Div15/RTL|U:/Projects/FPGA/Examples/4.Divider/Div15/RTL/Div15.v|
+!i113 0
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/4.Divider/Div15/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@div15
+vDiv15_TB
+R1
+!i10b 1
+!s100 mR_Y3Z9RZ1A]I>OFH;MOk2
+I>mkoOFLG^eD`05CdA6U2E1
+R2
+R0
+w1697114183
+8U:/Projects/FPGA/Examples/4.Divider/Div15/Project/../Sim/Div15_TB.v
+FU:/Projects/FPGA/Examples/4.Divider/Div15/Project/../Sim/Div15_TB.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1697114540.760000
+!s107 U:/Projects/FPGA/Examples/4.Divider/Div15/Project/../Sim/Div15_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/4.Divider/Div15/Project/../Sim|U:/Projects/FPGA/Examples/4.Divider/Div15/Project/../Sim/Div15_TB.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/4.Divider/Div15/Project/../Sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@div15_@t@b
