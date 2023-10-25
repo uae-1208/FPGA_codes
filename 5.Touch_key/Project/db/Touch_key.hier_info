@@ -1,0 +1,7 @@
+|Touch_key
+sys_clk => ~NO_FANOUT~
+rst_n => led~reg0.ACLR
+key_in => led~reg0.CLK
+led <= led~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
