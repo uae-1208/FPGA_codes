@@ -1,0 +1,13 @@
+|FSM
+sys_clk => state~1.DATAIN
+rst_n => state~3.DATAIN
+in[0] => Equal0.IN1
+in[0] => Equal1.IN0
+in[0] => Equal2.IN1
+in[1] => Equal0.IN0
+in[1] => Equal1.IN1
+in[1] => Equal2.IN0
+out[0] <= out[0].DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+

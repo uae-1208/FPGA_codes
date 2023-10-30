@@ -1,0 +1,10 @@
+
+State Machine - |FSM|state
+Name state.Three state.FiveHalf state.Two state.ThreeHalf state.One state.Half state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 
+state.Half 0 0 0 0 0 1 1 
+state.One 0 0 0 0 1 0 1 
+state.ThreeHalf 0 0 0 1 0 0 1 
+state.Two 0 0 1 0 0 0 1 
+state.FiveHalf 0 1 0 0 0 0 1 
+state.Three 1 0 0 0 0 0 1 
