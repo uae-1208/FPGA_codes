@@ -1,0 +1,62 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/Projects/FPGA/Examples/10.Beep/beep1/Project/simulation/modelsim
+T_opt
+Z1 !s110 1698234134
+V1o_[3ibeJ:zKMbLBCGh^81
+04 7 4 work Beep_TB fast 0
+=1-5405db4d15c6-6538ff16-322-4558
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vBeep
+R1
+!i10b 1
+!s100 >b0ga4hF3W5dLK]YW4U]?3
+I7@o=nJJT[fJN4B=T92n7l2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1698234088
+8U:/Projects/FPGA/Examples/10.Beep/beep1/RTL/Beep.v
+FU:/Projects/FPGA/Examples/10.Beep/beep1/RTL/Beep.v
+L0 1
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1698234134.326000
+!s107 U:/Projects/FPGA/Examples/10.Beep/beep1/RTL/Beep.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/10.Beep/beep1/RTL|U:/Projects/FPGA/Examples/10.Beep/beep1/RTL/Beep.v|
+!i113 0
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/10.Beep/beep1/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@beep
+vBeep_TB
+R1
+!i10b 1
+!s100 ;S^Zoj:C9W`keCb9C`0YL0
+I=M1RzE]z0SB:okG^]V4oP3
+R2
+R0
+w1698229254
+8U:/Projects/FPGA/Examples/10.Beep/beep1/Project/../Sim/Beep_TB.v
+FU:/Projects/FPGA/Examples/10.Beep/beep1/Project/../Sim/Beep_TB.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1698234134.463000
+!s107 U:/Projects/FPGA/Examples/10.Beep/beep1/Project/../Sim/Beep_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/10.Beep/beep1/Project/../Sim|U:/Projects/FPGA/Examples/10.Beep/beep1/Project/../Sim/Beep_TB.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/10.Beep/beep1/Project/../Sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@beep_@t@b
