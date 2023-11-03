@@ -1,0 +1,106 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/Project/simulation/modelsim
+T_opt
+Z1 !s110 1698837762
+VLe[iEdWDFzh:dj^5_CPIZ2
+04 10 4 work Seg_LED_TB fast 0
+=1-5405db4d15c6-65423502-351-4110
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vBin2BCD
+R1
+!i10b 1
+!s100 6H3^Dh6``R5V4j2;9oVS60
+I9?_I=?NR6`EnS<043ofPA3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1698830205
+8U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL/Bin2BCD.v
+FU:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL/Bin2BCD.v
+L0 1
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1698837762.431000
+!s107 U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL/Bin2BCD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL|U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL/Bin2BCD.v|
+!i113 0
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 !s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@bin2@b@c@d
+vSeg_Ctrl
+R1
+!i10b 1
+!s100 g^VANEO^DPW<WC==f=@EP3
+IDRS8<Rmf>fkf1GUkcDMQ21
+R2
+R0
+w1698837723
+8U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL/Seg_Ctrl.v
+FU:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL/Seg_Ctrl.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1698837762.184000
+!s107 U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL/Seg_Ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL|U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL/Seg_Ctrl.v|
+!i113 0
+R4
+R5
+n@seg_@ctrl
+vSeg_LED
+R1
+!i10b 1
+!s100 9<4R4Sh@bh>MLffb]<3HS2
+IVbkh^YIfdjGLI<jJ<64Uj2
+R2
+R0
+w1698837112
+8U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL/Seg_LED.v
+FU:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL/Seg_LED.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1698837762.311000
+!s107 U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL/Seg_LED.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL|U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/RTL/Seg_LED.v|
+!i113 0
+R4
+R5
+n@seg_@l@e@d
+vSeg_LED_TB
+R1
+!i10b 1
+!s100 ;bPJCdZdz9PAZP4:jELc?2
+I?LgoMaYXGii1nl[JeF<mI1
+R2
+R0
+w1698756151
+8U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/Project/../Sim/Seg_LED_TB.v
+FU:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/Project/../Sim/Seg_LED_TB.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1698837762.543000
+!s107 U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/Project/../Sim/Seg_LED_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/Project/../Sim|U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/Project/../Sim/Seg_LED_TB.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/12.Seg_LED/2.dynamic/Project/../Sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@seg_@l@e@d_@t@b
