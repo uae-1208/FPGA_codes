@@ -1,0 +1,193 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/Projects/FPGA/Examples/15.RAM/Project/simulation/modelsim
+T_opt
+!s110 1699090117
+V@6^_IOCCC:3E8A7U_jP3@3
+04 6 4 work RAM_TB fast 0
+=1-5405db4d15c6-65460ec4-30f-6f0
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vBin2BCD
+Z1 !s110 1699090116
+!i10b 1
+!s100 6H3^Dh6``R5V4j2;9oVS60
+I?kW=5c53Vl;i?JmFaU4J@0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1698830205
+8U:/Projects/FPGA/Examples/15.RAM/RTL/Bin2BCD.v
+FU:/Projects/FPGA/Examples/15.RAM/RTL/Bin2BCD.v
+L0 1
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1699090116.140000
+!s107 U:/Projects/FPGA/Examples/15.RAM/RTL/Bin2BCD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/15.RAM/RTL|U:/Projects/FPGA/Examples/15.RAM/RTL/Bin2BCD.v|
+!i113 0
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 !s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/15.RAM/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@bin2@b@c@d
+vRAM
+R1
+!i10b 1
+!s100 >aMHi<M=NIBX`cmZl7m[i0
+IRQgiio>mQilARSKVMO71[2
+R2
+R0
+w1699087213
+8U:/Projects/FPGA/Examples/15.RAM/RTL/RAM.v
+FU:/Projects/FPGA/Examples/15.RAM/RTL/RAM.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1699090116.022000
+!s107 U:/Projects/FPGA/Examples/15.RAM/RTL/RAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/15.RAM/RTL|U:/Projects/FPGA/Examples/15.RAM/RTL/RAM.v|
+!i113 0
+R4
+R5
+n@r@a@m
+vram_256x8
+R1
+!i10b 1
+!s100 c4m8cZV0B0MUd8E594^m43
+IW`KV3hg@S0gnFYZP2MOQS1
+R2
+R0
+w1699090082
+8U:/Projects/FPGA/Examples/15.RAM/Project/IP_core/ram_256x8/ram_256x8.v
+FU:/Projects/FPGA/Examples/15.RAM/Project/IP_core/ram_256x8/ram_256x8.v
+L0 39
+R3
+r1
+!s85 0
+31
+!s108 1699090116.251000
+!s107 U:/Projects/FPGA/Examples/15.RAM/Project/IP_core/ram_256x8/ram_256x8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/15.RAM/Project/IP_core/ram_256x8|U:/Projects/FPGA/Examples/15.RAM/Project/IP_core/ram_256x8/ram_256x8.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/15.RAM/Project/IP_core/ram_256x8 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vRAM_Ctrl
+Z6 !s110 1699090115
+!i10b 1
+!s100 ^HWoQmK[;C;?GKJeFQHC:1
+ICC38eUQSDSF`^]1[@Ck3=3
+R2
+R0
+Z7 w1699089982
+8U:/Projects/FPGA/Examples/15.RAM/RTL/RAM_Ctrl.v
+FU:/Projects/FPGA/Examples/15.RAM/RTL/RAM_Ctrl.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1699090115.901000
+!s107 U:/Projects/FPGA/Examples/15.RAM/RTL/RAM_Ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/15.RAM/RTL|U:/Projects/FPGA/Examples/15.RAM/RTL/RAM_Ctrl.v|
+!i113 0
+R4
+R5
+n@r@a@m_@ctrl
+vRAM_TB
+R1
+!i10b 1
+!s100 =S9mc7^>48B7VIM;`jE4:2
+IAiN<EWEYi>QEC51NXY<ZG2
+R2
+R0
+w1699084394
+8U:/Projects/FPGA/Examples/15.RAM/Project/../Sim/RAM_TB.v
+FU:/Projects/FPGA/Examples/15.RAM/Project/../Sim/RAM_TB.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1699090116.365000
+!s107 U:/Projects/FPGA/Examples/15.RAM/Project/../Sim/RAM_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/15.RAM/Project/../Sim|U:/Projects/FPGA/Examples/15.RAM/Project/../Sim/RAM_TB.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/15.RAM/Project/../Sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@r@a@m_@t@b
+vSeg_Ctrl
+R6
+!i10b 1
+!s100 <<Z?T^R3n@?HLTTF1eL=l1
+Ie;e^;UB5kn?Sc4Ga35MhC1
+R2
+R0
+R7
+8U:/Projects/FPGA/Examples/15.RAM/RTL/Seg_Ctrl.v
+FU:/Projects/FPGA/Examples/15.RAM/RTL/Seg_Ctrl.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1699090115.779000
+!s107 U:/Projects/FPGA/Examples/15.RAM/RTL/Seg_Ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/15.RAM/RTL|U:/Projects/FPGA/Examples/15.RAM/RTL/Seg_Ctrl.v|
+!i113 0
+R4
+R5
+n@seg_@ctrl
+vSeg_LED
+R6
+!i10b 1
+!s100 heFGdVCLkE]HZUO;C<9Q23
+IHE9JUOR2i=9ZO;RkD91l:0
+R2
+R0
+w1699019494
+8U:/Projects/FPGA/Examples/15.RAM/RTL/Seg_LED.v
+FU:/Projects/FPGA/Examples/15.RAM/RTL/Seg_LED.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1699090115.655000
+!s107 U:/Projects/FPGA/Examples/15.RAM/RTL/Seg_LED.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/15.RAM/RTL|U:/Projects/FPGA/Examples/15.RAM/RTL/Seg_LED.v|
+!i113 0
+R4
+R5
+n@seg_@l@e@d
+vTouch_key
+R6
+!i10b 1
+!s100 9QVj;H6_]]cm8C?J]0KXc0
+IK>BzRcj]f8OSZGIenCRSh0
+R2
+R0
+w1699017262
+8U:/Projects/FPGA/Examples/15.RAM/RTL/Touch_key.v
+FU:/Projects/FPGA/Examples/15.RAM/RTL/Touch_key.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1699090115.519000
+!s107 U:/Projects/FPGA/Examples/15.RAM/RTL/Touch_key.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/15.RAM/RTL|U:/Projects/FPGA/Examples/15.RAM/RTL/Touch_key.v|
+!i113 0
+R4
+R5
+n@touch_key
