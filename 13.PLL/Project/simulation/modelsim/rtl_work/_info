@@ -1,0 +1,150 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/Projects/FPGA/Examples/13_PLL/Project/simulation/modelsim
+T_opt
+!s110 1698931404
+VVT53N:AY76ME6abh3K_mN0
+04 6 4 work PLL_TB fast 0
+=1-5405db4d15c6-6543a2c6-1ff-1b7c
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vPLL
+Z1 !s110 1698931394
+!i10b 1
+!s100 ElN9EUlF5LA2iUkI]ND6O1
+I4d0l^=e9lome`oKaPh2hW3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1698931120
+8U:/Projects/FPGA/Examples/13_PLL/RTL/PLL.v
+FU:/Projects/FPGA/Examples/13_PLL/RTL/PLL.v
+L0 1
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1698931394.707000
+!s107 U:/Projects/FPGA/Examples/13_PLL/RTL/PLL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/13_PLL/RTL|U:/Projects/FPGA/Examples/13_PLL/RTL/PLL.v|
+!i113 0
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/13_PLL/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@p@l@l
+vPLL1
+R1
+!i10b 1
+!s100 a3OW7gPN7b[^=7JG?zFgc1
+IGl[DE<j<P<FK`kmeOC6G:1
+R2
+R0
+w1698930695
+8U:/Projects/FPGA/Examples/13_PLL/Project/IP_core/PLL1/PLL1.v
+FU:/Projects/FPGA/Examples/13_PLL/Project/IP_core/PLL1/PLL1.v
+Z5 L0 39
+R3
+r1
+!s85 0
+31
+!s108 1698931394.852000
+!s107 U:/Projects/FPGA/Examples/13_PLL/Project/IP_core/PLL1/PLL1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/13_PLL/Project/IP_core/PLL1|U:/Projects/FPGA/Examples/13_PLL/Project/IP_core/PLL1/PLL1.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/13_PLL/Project/IP_core/PLL1 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@p@l@l1
+vPLL1_altpll
+Z6 !s110 1698931395
+!i10b 1
+!s100 0X[<Nd0:ddWzZai;8bhcT2
+IOb?NBX>nLVHeYPT;eRdI_0
+R2
+R0
+Z7 w1698931253
+8U:/Projects/FPGA/Examples/13_PLL/Project/db/pll1_altpll.v
+FU:/Projects/FPGA/Examples/13_PLL/Project/db/pll1_altpll.v
+Z8 L0 29
+R3
+r1
+!s85 0
+31
+!s108 1698931395.155000
+!s107 U:/Projects/FPGA/Examples/13_PLL/Project/db/pll1_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/13_PLL/Project/db|U:/Projects/FPGA/Examples/13_PLL/Project/db/pll1_altpll.v|
+!i113 0
+R4
+Z9 !s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/13_PLL/Project/db -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@p@l@l1_altpll
+vPLL2
+R6
+!i10b 1
+!s100 YJJ=;Dz1UN0QXzZY>X[2R3
+I?2mUi9fIMmF>FQ9ak]BR30
+R2
+R0
+w1698930626
+8U:/Projects/FPGA/Examples/13_PLL/Project/IP_core/PLL2/PLL2.v
+FU:/Projects/FPGA/Examples/13_PLL/Project/IP_core/PLL2/PLL2.v
+R5
+R3
+r1
+!s85 0
+31
+!s108 1698931394.991000
+!s107 U:/Projects/FPGA/Examples/13_PLL/Project/IP_core/PLL2/PLL2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/13_PLL/Project/IP_core/PLL2|U:/Projects/FPGA/Examples/13_PLL/Project/IP_core/PLL2/PLL2.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/13_PLL/Project/IP_core/PLL2 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@p@l@l2
+vPLL2_altpll
+R6
+!i10b 1
+!s100 mgYV9XRIJOL>Y0YLn8UD[2
+I5D0@7c=LS_P<^9U^hX_Ah2
+R2
+R0
+R7
+8U:/Projects/FPGA/Examples/13_PLL/Project/db/pll2_altpll.v
+FU:/Projects/FPGA/Examples/13_PLL/Project/db/pll2_altpll.v
+R8
+R3
+r1
+!s85 0
+31
+!s108 1698931395.313000
+!s107 U:/Projects/FPGA/Examples/13_PLL/Project/db/pll2_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/13_PLL/Project/db|U:/Projects/FPGA/Examples/13_PLL/Project/db/pll2_altpll.v|
+!i113 0
+R4
+R9
+n@p@l@l2_altpll
+vPLL_TB
+R6
+!i10b 1
+!s100 Pd`j>1ZM@B:hn[c]anO]U0
+IN5;H6mZG_^UDm2h;i@lXW3
+R2
+R0
+w1698931218
+8U:/Projects/FPGA/Examples/13_PLL/Project/../Sim/PLL_TB.v
+FU:/Projects/FPGA/Examples/13_PLL/Project/../Sim/PLL_TB.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1698931395.457000
+!s107 U:/Projects/FPGA/Examples/13_PLL/Project/../Sim/PLL_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/13_PLL/Project/../Sim|U:/Projects/FPGA/Examples/13_PLL/Project/../Sim/PLL_TB.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/13_PLL/Project/../Sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@p@l@l_@t@b
