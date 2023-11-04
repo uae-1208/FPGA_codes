@@ -1,0 +1,193 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/Projects/FPGA/Examples/14.ROM/Project/simulation/modelsim
+T_opt
+Z1 !s110 1699020751
+VKa[2`3dUh;V[fH_c41`?N3
+04 6 4 work ROM_TB fast 0
+=1-5405db4d15c6-6544ffcf-228-4930
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vBin2BCD
+R1
+!i10b 1
+!s100 6H3^Dh6``R5V4j2;9oVS60
+I>3hzC7J]a8FD]<6eOTeW11
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1698830205
+8U:/Projects/FPGA/Examples/14.ROM/RTL/Bin2BCD.v
+FU:/Projects/FPGA/Examples/14.ROM/RTL/Bin2BCD.v
+L0 1
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1699020751.014000
+!s107 U:/Projects/FPGA/Examples/14.ROM/RTL/Bin2BCD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/14.ROM/RTL|U:/Projects/FPGA/Examples/14.ROM/RTL/Bin2BCD.v|
+!i113 0
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 !s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/14.ROM/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@bin2@b@c@d
+vROM
+Z6 !s110 1699020750
+!i10b 1
+!s100 CEecMf;8GDD`K5S?VXc7B0
+I27^Yg59=m0:4]@nkR@D8a0
+R2
+R0
+w1699019245
+8U:/Projects/FPGA/Examples/14.ROM/RTL/ROM.v
+FU:/Projects/FPGA/Examples/14.ROM/RTL/ROM.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1699020750.907000
+!s107 U:/Projects/FPGA/Examples/14.ROM/RTL/ROM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/14.ROM/RTL|U:/Projects/FPGA/Examples/14.ROM/RTL/ROM.v|
+!i113 0
+R4
+R5
+n@r@o@m
+vrom_256x8
+R1
+!i10b 1
+!s100 fQi9;zLd^icYQVT94`XMM0
+IUZLE2P]ingN8NOFkcfAGg2
+R2
+R0
+w1699016715
+8U:/Projects/FPGA/Examples/14.ROM/Project/IP_core/rom_256x8/rom_256x8.v
+FU:/Projects/FPGA/Examples/14.ROM/Project/IP_core/rom_256x8/rom_256x8.v
+L0 39
+R3
+r1
+!s85 0
+31
+!s108 1699020751.128000
+!s107 U:/Projects/FPGA/Examples/14.ROM/Project/IP_core/rom_256x8/rom_256x8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/14.ROM/Project/IP_core/rom_256x8|U:/Projects/FPGA/Examples/14.ROM/Project/IP_core/rom_256x8/rom_256x8.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/14.ROM/Project/IP_core/rom_256x8 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vROM_Ctrl
+R6
+!i10b 1
+!s100 ?cRE]=KShXTN[MEB3RKoY1
+IiM^CjaB?md0RAYoEiZ28o3
+R2
+R0
+w1699019382
+8U:/Projects/FPGA/Examples/14.ROM/RTL/ROM_Ctrl.v
+FU:/Projects/FPGA/Examples/14.ROM/RTL/ROM_Ctrl.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1699020750.794000
+!s107 U:/Projects/FPGA/Examples/14.ROM/RTL/ROM_Ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/14.ROM/RTL|U:/Projects/FPGA/Examples/14.ROM/RTL/ROM_Ctrl.v|
+!i113 0
+R4
+R5
+n@r@o@m_@ctrl
+vROM_TB
+R1
+!i10b 1
+!s100 DCb_@0P;VGAh9D]?MCOWc2
+I;8G<WgCf^ZB9JQ?8<hSLM0
+R2
+R0
+w1699020715
+8U:/Projects/FPGA/Examples/14.ROM/Project/../Sim/ROM_TB.v
+FU:/Projects/FPGA/Examples/14.ROM/Project/../Sim/ROM_TB.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1699020751.240000
+!s107 U:/Projects/FPGA/Examples/14.ROM/Project/../Sim/ROM_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/14.ROM/Project/../Sim|U:/Projects/FPGA/Examples/14.ROM/Project/../Sim/ROM_TB.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/14.ROM/Project/../Sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@r@o@m_@t@b
+vSeg_Ctrl
+R6
+!i10b 1
+!s100 <<Z?T^R3n@?HLTTF1eL=l1
+IbHPSDEJUJ8nfACO39Hc_g1
+R2
+R0
+w1699019508
+8U:/Projects/FPGA/Examples/14.ROM/RTL/Seg_Ctrl.v
+FU:/Projects/FPGA/Examples/14.ROM/RTL/Seg_Ctrl.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1699020750.673000
+!s107 U:/Projects/FPGA/Examples/14.ROM/RTL/Seg_Ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/14.ROM/RTL|U:/Projects/FPGA/Examples/14.ROM/RTL/Seg_Ctrl.v|
+!i113 0
+R4
+R5
+n@seg_@ctrl
+vSeg_LED
+R6
+!i10b 1
+!s100 heFGdVCLkE]HZUO;C<9Q23
+I^SPM:a2E0=?Pf8ecOLL[32
+R2
+R0
+w1699019494
+8U:/Projects/FPGA/Examples/14.ROM/RTL/Seg_LED.v
+FU:/Projects/FPGA/Examples/14.ROM/RTL/Seg_LED.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1699020750.549000
+!s107 U:/Projects/FPGA/Examples/14.ROM/RTL/Seg_LED.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/14.ROM/RTL|U:/Projects/FPGA/Examples/14.ROM/RTL/Seg_LED.v|
+!i113 0
+R4
+R5
+n@seg_@l@e@d
+vTouch_key
+R6
+!i10b 1
+!s100 9QVj;H6_]]cm8C?J]0KXc0
+IPg^f1E_z?hE`?:31:k=c<2
+R2
+R0
+w1699017262
+8U:/Projects/FPGA/Examples/14.ROM/RTL/Touch_key.v
+FU:/Projects/FPGA/Examples/14.ROM/RTL/Touch_key.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1699020750.419000
+!s107 U:/Projects/FPGA/Examples/14.ROM/RTL/Touch_key.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/14.ROM/RTL|U:/Projects/FPGA/Examples/14.ROM/RTL/Touch_key.v|
+!i113 0
+R4
+R5
+n@touch_key
