@@ -1,0 +1,1713 @@
+TimeQuest Timing Analyzer report for UART
+Mon Nov 06 20:05:00 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'sys_clk'
+ 13. Slow 1200mV 85C Model Hold: 'sys_clk'
+ 14. Slow 1200mV 85C Model Minimum Pulse Width: 'sys_clk'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Slow 1200mV 85C Model Metastability Report
+ 20. Slow 1200mV 0C Model Fmax Summary
+ 21. Slow 1200mV 0C Model Setup Summary
+ 22. Slow 1200mV 0C Model Hold Summary
+ 23. Slow 1200mV 0C Model Recovery Summary
+ 24. Slow 1200mV 0C Model Removal Summary
+ 25. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 26. Slow 1200mV 0C Model Setup: 'sys_clk'
+ 27. Slow 1200mV 0C Model Hold: 'sys_clk'
+ 28. Slow 1200mV 0C Model Minimum Pulse Width: 'sys_clk'
+ 29. Setup Times
+ 30. Hold Times
+ 31. Clock to Output Times
+ 32. Minimum Clock to Output Times
+ 33. Slow 1200mV 0C Model Metastability Report
+ 34. Fast 1200mV 0C Model Setup Summary
+ 35. Fast 1200mV 0C Model Hold Summary
+ 36. Fast 1200mV 0C Model Recovery Summary
+ 37. Fast 1200mV 0C Model Removal Summary
+ 38. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 39. Fast 1200mV 0C Model Setup: 'sys_clk'
+ 40. Fast 1200mV 0C Model Hold: 'sys_clk'
+ 41. Fast 1200mV 0C Model Minimum Pulse Width: 'sys_clk'
+ 42. Setup Times
+ 43. Hold Times
+ 44. Clock to Output Times
+ 45. Minimum Clock to Output Times
+ 46. Fast 1200mV 0C Model Metastability Report
+ 47. Multicorner Timing Analysis Summary
+ 48. Setup Times
+ 49. Hold Times
+ 50. Clock to Output Times
+ 51. Minimum Clock to Output Times
+ 52. Board Trace Model Assignments
+ 53. Input Transition Times
+ 54. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 55. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 56. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 57. Setup Transfers
+ 58. Hold Transfers
+ 59. Report TCCS
+ 60. Report RSKM
+ 61. Unconstrained Paths
+ 62. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                        ;
++--------------------+-----------------------------------------------------+
+; Quartus II Version ; Version 13.1.0 Build 162 10/23/2013 SJ Full Version ;
+; Revision Name      ; UART                                                ;
+; Device Family      ; Cyclone IV E                                        ;
+; Device Name        ; EP4CE10F17C8                                        ;
+; Timing Models      ; Final                                               ;
+; Delay Model        ; Combined                                            ;
+; Rise/Fall Delays   ; Enabled                                             ;
++--------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
+;     Processors 5-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                              ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets     ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; sys_clk    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { sys_clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 274.57 MHz ; 250.0 MHz       ; sys_clk    ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++---------+--------+------------------+
+; Clock   ; Slack  ; End Point TNS    ;
++---------+--------+------------------+
+; sys_clk ; -2.642 ; -70.050          ;
++---------+--------+------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++---------+-------+------------------+
+; Clock   ; Slack ; End Point TNS    ;
++---------+-------+------------------+
+; sys_clk ; 0.452 ; 0.000            ;
++---------+-------+------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++---------+--------+--------------------------------+
+; Clock   ; Slack  ; End Point TNS                  ;
++---------+--------+--------------------------------+
+; sys_clk ; -3.000 ; -60.993                        ;
++---------+--------+--------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'sys_clk'                                                                     ;
++--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; -2.642 ; baud_cnt[0]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 3.064      ;
+; -2.642 ; baud_cnt[0]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 3.064      ;
+; -2.642 ; baud_cnt[0]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 3.064      ;
+; -2.642 ; baud_cnt[0]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 3.064      ;
+; -2.642 ; baud_cnt[0]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 3.064      ;
+; -2.642 ; baud_cnt[0]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 3.064      ;
+; -2.642 ; baud_cnt[0]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 3.064      ;
+; -2.642 ; baud_cnt[0]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 3.064      ;
+; -2.642 ; baud_cnt[0]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 3.064      ;
+; -2.642 ; baud_cnt[0]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 3.064      ;
+; -2.564 ; baud_cnt[11] ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.483      ;
+; -2.564 ; baud_cnt[11] ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.483      ;
+; -2.564 ; baud_cnt[11] ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.483      ;
+; -2.564 ; baud_cnt[11] ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.483      ;
+; -2.564 ; baud_cnt[11] ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.483      ;
+; -2.564 ; baud_cnt[11] ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.483      ;
+; -2.564 ; baud_cnt[11] ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.483      ;
+; -2.564 ; baud_cnt[11] ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.483      ;
+; -2.564 ; baud_cnt[11] ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.483      ;
+; -2.564 ; baud_cnt[11] ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.483      ;
+; -2.464 ; baud_cnt[6]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 2.886      ;
+; -2.464 ; baud_cnt[6]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 2.886      ;
+; -2.464 ; baud_cnt[6]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 2.886      ;
+; -2.464 ; baud_cnt[6]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 2.886      ;
+; -2.464 ; baud_cnt[6]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 2.886      ;
+; -2.464 ; baud_cnt[6]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 2.886      ;
+; -2.464 ; baud_cnt[6]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 2.886      ;
+; -2.464 ; baud_cnt[6]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 2.886      ;
+; -2.464 ; baud_cnt[6]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 2.886      ;
+; -2.464 ; baud_cnt[6]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.579     ; 2.886      ;
+; -2.444 ; baud_cnt[8]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.363      ;
+; -2.444 ; baud_cnt[8]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.363      ;
+; -2.444 ; baud_cnt[8]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.363      ;
+; -2.444 ; baud_cnt[8]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.363      ;
+; -2.444 ; baud_cnt[8]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.363      ;
+; -2.444 ; baud_cnt[8]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.363      ;
+; -2.444 ; baud_cnt[8]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.363      ;
+; -2.444 ; baud_cnt[8]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.363      ;
+; -2.444 ; baud_cnt[8]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.363      ;
+; -2.444 ; baud_cnt[8]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.363      ;
+; -2.442 ; baud_cnt[12] ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.361      ;
+; -2.442 ; baud_cnt[12] ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.361      ;
+; -2.442 ; baud_cnt[12] ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.361      ;
+; -2.442 ; baud_cnt[12] ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.361      ;
+; -2.442 ; baud_cnt[12] ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.361      ;
+; -2.442 ; baud_cnt[12] ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.361      ;
+; -2.442 ; baud_cnt[12] ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.361      ;
+; -2.442 ; baud_cnt[12] ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.361      ;
+; -2.442 ; baud_cnt[12] ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.361      ;
+; -2.442 ; baud_cnt[12] ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.361      ;
+; -2.395 ; baud_cnt[4]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.314      ;
+; -2.395 ; baud_cnt[4]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.314      ;
+; -2.395 ; baud_cnt[4]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.314      ;
+; -2.395 ; baud_cnt[4]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.314      ;
+; -2.395 ; baud_cnt[4]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.314      ;
+; -2.395 ; baud_cnt[4]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.314      ;
+; -2.395 ; baud_cnt[4]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.314      ;
+; -2.395 ; baud_cnt[4]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.314      ;
+; -2.395 ; baud_cnt[4]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.314      ;
+; -2.395 ; baud_cnt[4]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.314      ;
+; -2.362 ; baud_cnt[1]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.281      ;
+; -2.362 ; baud_cnt[1]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.281      ;
+; -2.362 ; baud_cnt[1]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.281      ;
+; -2.362 ; baud_cnt[1]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.281      ;
+; -2.362 ; baud_cnt[1]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.281      ;
+; -2.362 ; baud_cnt[1]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.281      ;
+; -2.362 ; baud_cnt[1]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.281      ;
+; -2.362 ; baud_cnt[1]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.281      ;
+; -2.362 ; baud_cnt[1]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.281      ;
+; -2.362 ; baud_cnt[1]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.281      ;
+; -2.343 ; baud_cnt[3]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.262      ;
+; -2.343 ; baud_cnt[3]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.262      ;
+; -2.343 ; baud_cnt[3]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.262      ;
+; -2.343 ; baud_cnt[3]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.262      ;
+; -2.343 ; baud_cnt[3]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.262      ;
+; -2.343 ; baud_cnt[3]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.262      ;
+; -2.343 ; baud_cnt[3]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.262      ;
+; -2.343 ; baud_cnt[3]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.262      ;
+; -2.343 ; baud_cnt[3]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.262      ;
+; -2.343 ; baud_cnt[3]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.262      ;
+; -2.240 ; baud_cnt[2]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.159      ;
+; -2.240 ; baud_cnt[2]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.159      ;
+; -2.240 ; baud_cnt[2]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.159      ;
+; -2.240 ; baud_cnt[2]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.159      ;
+; -2.240 ; baud_cnt[2]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.159      ;
+; -2.240 ; baud_cnt[2]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.159      ;
+; -2.240 ; baud_cnt[2]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.159      ;
+; -2.240 ; baud_cnt[2]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.159      ;
+; -2.240 ; baud_cnt[2]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.159      ;
+; -2.240 ; baud_cnt[2]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.159      ;
+; -2.199 ; baud_cnt[10] ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.118      ;
+; -2.199 ; baud_cnt[10] ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.118      ;
+; -2.199 ; baud_cnt[10] ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.118      ;
+; -2.199 ; baud_cnt[10] ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.118      ;
+; -2.199 ; baud_cnt[10] ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.118      ;
+; -2.199 ; baud_cnt[10] ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.118      ;
+; -2.199 ; baud_cnt[10] ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.118      ;
+; -2.199 ; baud_cnt[10] ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.118      ;
+; -2.199 ; baud_cnt[10] ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.118      ;
+; -2.199 ; baud_cnt[10] ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 3.118      ;
++--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'sys_clk'                                                                         ;
++-------+--------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.452 ; work_flag    ; work_flag        ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.746      ;
+; 0.506 ; data_reg[1]  ; data_out[1]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.800      ;
+; 0.506 ; re_reg2      ; re_reg3          ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.800      ;
+; 0.507 ; baud_cnt[12] ; baud_cnt[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.801      ;
+; 0.508 ; data_reg[2]  ; data_out[2]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.802      ;
+; 0.510 ; data_reg[1]  ; data_reg[0]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.804      ;
+; 0.510 ; data_reg[2]  ; data_reg[1]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.804      ;
+; 0.510 ; data_reg[6]  ; data_out[6]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.804      ;
+; 0.510 ; data_reg[6]  ; data_reg[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.804      ;
+; 0.533 ; work_flag    ; start_flag       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.827      ;
+; 0.603 ; baud_cnt[5]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 1.394      ;
+; 0.629 ; baud_cnt[8]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 1.420      ;
+; 0.636 ; baud_cnt[4]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 1.427      ;
+; 0.639 ; re_reg1      ; re_reg2          ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.933      ;
+; 0.648 ; data_reg[7]  ; data_reg[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.942      ;
+; 0.649 ; data_reg[7]  ; data_out[7]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.943      ;
+; 0.650 ; data_reg[4]  ; data_out[4]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.944      ;
+; 0.668 ; data_reg[5]  ; data_reg[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.962      ;
+; 0.670 ; re_reg3      ; start_flag       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.964      ;
+; 0.705 ; data_reg[4]  ; data_reg[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.999      ;
+; 0.705 ; data_reg[5]  ; data_out[5]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 0.998      ;
+; 0.712 ; data_reg[0]  ; data_out[0]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.005      ;
+; 0.728 ; baud_cnt[6]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.102      ; 1.042      ;
+; 0.740 ; start_flag   ; work_flag        ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.034      ;
+; 0.742 ; baud_cnt[3]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 1.533      ;
+; 0.744 ; re_reg3      ; data_reg[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.083      ; 1.039      ;
+; 0.744 ; baud_cnt[3]  ; baud_cnt[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.038      ;
+; 0.746 ; baud_cnt[5]  ; baud_cnt[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.040      ;
+; 0.747 ; baud_cnt[2]  ; baud_cnt[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.041      ;
+; 0.749 ; baud_cnt[9]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.102      ; 1.063      ;
+; 0.751 ; baud_cnt[7]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 1.542      ;
+; 0.753 ; bit_cnt[3]   ; bit_cnt[3]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.047      ;
+; 0.754 ; bit_cnt[1]   ; bit_cnt[1]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.048      ;
+; 0.760 ; baud_cnt[1]  ; baud_cnt[1]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.054      ;
+; 0.760 ; baud_cnt[2]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 1.551      ;
+; 0.761 ; baud_cnt[11] ; baud_cnt[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.055      ;
+; 0.763 ; baud_cnt[7]  ; baud_cnt[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.057      ;
+; 0.763 ; baud_cnt[4]  ; baud_cnt[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.057      ;
+; 0.765 ; baud_cnt[10] ; baud_cnt[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.059      ;
+; 0.765 ; baud_cnt[8]  ; baud_cnt[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.059      ;
+; 0.766 ; baud_cnt[0]  ; baud_cnt[0]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.102      ; 1.080      ;
+; 0.773 ; bit_cnt[2]   ; bit_cnt[2]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.067      ;
+; 0.783 ; read_flag    ; bit_cnt[0]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.077      ;
+; 0.826 ; re_reg2      ; start_flag       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.120      ;
+; 0.874 ; baud_cnt[5]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 1.665      ;
+; 0.898 ; baud_cnt[1]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 1.689      ;
+; 0.907 ; baud_cnt[4]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 1.698      ;
+; 0.932 ; data_reg[3]  ; data_out[3]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.226      ;
+; 0.933 ; data_reg[3]  ; data_reg[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.227      ;
+; 0.988 ; bit_cnt[0]   ; bit_cnt[0]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.282      ;
+; 1.013 ; baud_cnt[3]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 1.804      ;
+; 1.031 ; baud_cnt[2]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 1.822      ;
+; 1.086 ; work_flag    ; bit_cnt[2]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.380      ;
+; 1.086 ; work_flag    ; bit_cnt[3]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.380      ;
+; 1.086 ; work_flag    ; bit_cnt[1]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.380      ;
+; 1.086 ; work_flag    ; bit_cnt[0]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.380      ;
+; 1.099 ; baud_cnt[3]  ; baud_cnt[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.393      ;
+; 1.108 ; baud_cnt[2]  ; baud_cnt[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.402      ;
+; 1.108 ; bit_cnt[1]   ; bit_cnt[2]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.402      ;
+; 1.115 ; baud_cnt[1]  ; baud_cnt[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.409      ;
+; 1.116 ; baud_cnt[11] ; baud_cnt[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.410      ;
+; 1.117 ; baud_cnt[7]  ; baud_cnt[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.411      ;
+; 1.117 ; baud_cnt[2]  ; baud_cnt[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.411      ;
+; 1.124 ; baud_cnt[4]  ; baud_cnt[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.418      ;
+; 1.126 ; read_flag    ; bit_cnt[1]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.420      ;
+; 1.126 ; baud_cnt[10] ; baud_cnt[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.420      ;
+; 1.134 ; bit_cnt[2]   ; bit_cnt[3]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.428      ;
+; 1.135 ; baud_cnt[8]  ; baud_cnt[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.429      ;
+; 1.135 ; read_flag    ; bit_cnt[2]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.429      ;
+; 1.135 ; baud_cnt[10] ; baud_cnt[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.429      ;
+; 1.169 ; baud_cnt[1]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 1.960      ;
+; 1.218 ; bit_cnt[2]   ; work_flag        ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.512      ;
+; 1.229 ; baud_cnt[6]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.102      ; 1.543      ;
+; 1.230 ; baud_cnt[3]  ; baud_cnt[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.524      ;
+; 1.231 ; baud_cnt[5]  ; baud_cnt[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.525      ;
+; 1.239 ; bit_cnt[1]   ; bit_cnt[3]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.533      ;
+; 1.240 ; baud_cnt[5]  ; baud_cnt[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.534      ;
+; 1.246 ; baud_cnt[1]  ; baud_cnt[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.540      ;
+; 1.248 ; baud_cnt[2]  ; baud_cnt[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.542      ;
+; 1.255 ; baud_cnt[1]  ; baud_cnt[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.549      ;
+; 1.257 ; baud_cnt[7]  ; baud_cnt[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.551      ;
+; 1.264 ; baud_cnt[4]  ; baud_cnt[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.558      ;
+; 1.266 ; baud_cnt[8]  ; baud_cnt[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.560      ;
+; 1.266 ; read_flag    ; bit_cnt[3]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.560      ;
+; 1.273 ; baud_cnt[4]  ; baud_cnt[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.567      ;
+; 1.275 ; baud_cnt[8]  ; baud_cnt[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.569      ;
+; 1.321 ; bit_cnt[0]   ; bit_cnt[1]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.615      ;
+; 1.344 ; bit_cnt[0]   ; bit_cnt[2]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.638      ;
+; 1.359 ; bit_cnt[3]   ; work_flag        ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.653      ;
+; 1.370 ; baud_cnt[12] ; read_flag        ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.664      ;
+; 1.370 ; baud_cnt[3]  ; baud_cnt[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.664      ;
+; 1.379 ; baud_cnt[3]  ; baud_cnt[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.673      ;
+; 1.380 ; baud_cnt[5]  ; baud_cnt[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.674      ;
+; 1.386 ; baud_cnt[1]  ; baud_cnt[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.680      ;
+; 1.388 ; baud_cnt[7]  ; baud_cnt[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.682      ;
+; 1.388 ; baud_cnt[2]  ; baud_cnt[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.682      ;
+; 1.393 ; baud_cnt[0]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.102      ; 1.707      ;
+; 1.394 ; work_flag    ; baud_cnt[0]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 2.185      ;
+; 1.394 ; work_flag    ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 2.185      ;
+; 1.394 ; work_flag    ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.579      ; 2.185      ;
++-------+--------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'sys_clk'                                                ;
++--------+--------------+----------------+------------------+---------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+---------+------------+------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; sys_clk ; Rise       ; sys_clk          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[0]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[10]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[11]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[12]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[1]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[2]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[3]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[4]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[5]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[6]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[7]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[8]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[9]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; bit_cnt[0]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; bit_cnt[1]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; bit_cnt[2]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; bit_cnt[3]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[0]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[1]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[2]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[3]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[4]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[5]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[6]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[7]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[0]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[1]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[2]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[3]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[4]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[5]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[6]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[7]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; re_reg1          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; re_reg2          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; re_reg3          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; read_flag        ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; start_flag       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; work_flag        ;
+; 0.262  ; 0.482        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[0]      ;
+; 0.262  ; 0.482        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[6]      ;
+; 0.262  ; 0.482        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[9]      ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[10]     ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[11]     ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[12]     ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[1]      ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[2]      ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[3]      ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[4]      ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[5]      ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[7]      ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[8]      ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_out[1]~reg0 ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_out[2]~reg0 ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_out[3]~reg0 ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_out[4]~reg0 ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_out[6]~reg0 ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_out[7]~reg0 ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[0]      ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[1]      ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[2]      ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[3]      ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[4]      ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[5]      ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[6]      ;
+; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[7]      ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; bit_cnt[0]       ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; bit_cnt[1]       ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; bit_cnt[2]       ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; bit_cnt[3]       ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_out[0]~reg0 ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; data_out[5]~reg0 ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; re_reg1          ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; re_reg2          ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; re_reg3          ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; read_flag        ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; start_flag       ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; work_flag        ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; baud_cnt[10]     ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; baud_cnt[11]     ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; baud_cnt[12]     ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; baud_cnt[1]      ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; baud_cnt[2]      ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; baud_cnt[3]      ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; baud_cnt[4]      ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; baud_cnt[5]      ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; baud_cnt[7]      ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; baud_cnt[8]      ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; bit_cnt[0]       ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; bit_cnt[1]       ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; bit_cnt[2]       ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; bit_cnt[3]       ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; data_out[0]~reg0 ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; data_out[5]~reg0 ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; re_reg1          ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; re_reg2          ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; re_reg3          ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; read_flag        ;
+; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; sys_clk ; Rise       ; start_flag       ;
++--------+--------------+----------------+------------------+---------+------------+------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; rx        ; sys_clk    ; 0.320 ; 0.469 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Hold Times                                                             ;
++-----------+------------+-------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+--------+------------+-----------------+
+; rx        ; sys_clk    ; 0.068 ; -0.065 ; Rise       ; sys_clk         ;
++-----------+------------+-------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; data_out[*]  ; sys_clk    ; 7.047 ; 6.891 ; Rise       ; sys_clk         ;
+;  data_out[0] ; sys_clk    ; 6.748 ; 6.656 ; Rise       ; sys_clk         ;
+;  data_out[1] ; sys_clk    ; 6.704 ; 6.610 ; Rise       ; sys_clk         ;
+;  data_out[2] ; sys_clk    ; 6.722 ; 6.626 ; Rise       ; sys_clk         ;
+;  data_out[3] ; sys_clk    ; 6.744 ; 6.650 ; Rise       ; sys_clk         ;
+;  data_out[4] ; sys_clk    ; 7.047 ; 6.891 ; Rise       ; sys_clk         ;
+;  data_out[5] ; sys_clk    ; 6.759 ; 6.653 ; Rise       ; sys_clk         ;
+;  data_out[6] ; sys_clk    ; 6.780 ; 6.684 ; Rise       ; sys_clk         ;
+;  data_out[7] ; sys_clk    ; 6.750 ; 6.647 ; Rise       ; sys_clk         ;
+; valid_flag   ; sys_clk    ; 6.904 ; 7.067 ; Rise       ; sys_clk         ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; data_out[*]  ; sys_clk    ; 6.475 ; 6.383 ; Rise       ; sys_clk         ;
+;  data_out[0] ; sys_clk    ; 6.519 ; 6.429 ; Rise       ; sys_clk         ;
+;  data_out[1] ; sys_clk    ; 6.475 ; 6.383 ; Rise       ; sys_clk         ;
+;  data_out[2] ; sys_clk    ; 6.493 ; 6.399 ; Rise       ; sys_clk         ;
+;  data_out[3] ; sys_clk    ; 6.515 ; 6.423 ; Rise       ; sys_clk         ;
+;  data_out[4] ; sys_clk    ; 6.806 ; 6.654 ; Rise       ; sys_clk         ;
+;  data_out[5] ; sys_clk    ; 6.529 ; 6.425 ; Rise       ; sys_clk         ;
+;  data_out[6] ; sys_clk    ; 6.550 ; 6.455 ; Rise       ; sys_clk         ;
+;  data_out[7] ; sys_clk    ; 6.520 ; 6.418 ; Rise       ; sys_clk         ;
+; valid_flag   ; sys_clk    ; 6.666 ; 6.824 ; Rise       ; sys_clk         ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 294.99 MHz ; 250.0 MHz       ; sys_clk    ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++---------+--------+-----------------+
+; Clock   ; Slack  ; End Point TNS   ;
++---------+--------+-----------------+
+; sys_clk ; -2.390 ; -62.703         ;
++---------+--------+-----------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++---------+-------+-----------------+
+; Clock   ; Slack ; End Point TNS   ;
++---------+-------+-----------------+
+; sys_clk ; 0.401 ; 0.000           ;
++---------+-------+-----------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++---------+--------+-------------------------------+
+; Clock   ; Slack  ; End Point TNS                 ;
++---------+--------+-------------------------------+
+; sys_clk ; -3.000 ; -60.993                       ;
++---------+--------+-------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'sys_clk'                                                                      ;
++--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; -2.390 ; baud_cnt[0]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.853      ;
+; -2.390 ; baud_cnt[0]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.853      ;
+; -2.390 ; baud_cnt[0]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.853      ;
+; -2.390 ; baud_cnt[0]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.853      ;
+; -2.390 ; baud_cnt[0]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.853      ;
+; -2.390 ; baud_cnt[0]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.853      ;
+; -2.390 ; baud_cnt[0]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.853      ;
+; -2.390 ; baud_cnt[0]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.853      ;
+; -2.390 ; baud_cnt[0]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.853      ;
+; -2.390 ; baud_cnt[0]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.853      ;
+; -2.372 ; baud_cnt[11] ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.301      ;
+; -2.372 ; baud_cnt[11] ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.301      ;
+; -2.372 ; baud_cnt[11] ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.301      ;
+; -2.372 ; baud_cnt[11] ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.301      ;
+; -2.372 ; baud_cnt[11] ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.301      ;
+; -2.372 ; baud_cnt[11] ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.301      ;
+; -2.372 ; baud_cnt[11] ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.301      ;
+; -2.372 ; baud_cnt[11] ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.301      ;
+; -2.372 ; baud_cnt[11] ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.301      ;
+; -2.372 ; baud_cnt[11] ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.301      ;
+; -2.230 ; baud_cnt[6]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.693      ;
+; -2.230 ; baud_cnt[6]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.693      ;
+; -2.230 ; baud_cnt[6]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.693      ;
+; -2.230 ; baud_cnt[6]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.693      ;
+; -2.230 ; baud_cnt[6]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.693      ;
+; -2.230 ; baud_cnt[6]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.693      ;
+; -2.230 ; baud_cnt[6]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.693      ;
+; -2.230 ; baud_cnt[6]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.693      ;
+; -2.230 ; baud_cnt[6]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.693      ;
+; -2.230 ; baud_cnt[6]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.539     ; 2.693      ;
+; -2.201 ; baud_cnt[8]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.130      ;
+; -2.201 ; baud_cnt[8]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.130      ;
+; -2.201 ; baud_cnt[8]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.130      ;
+; -2.201 ; baud_cnt[8]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.130      ;
+; -2.201 ; baud_cnt[8]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.130      ;
+; -2.201 ; baud_cnt[8]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.130      ;
+; -2.201 ; baud_cnt[8]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.130      ;
+; -2.201 ; baud_cnt[8]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.130      ;
+; -2.201 ; baud_cnt[8]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.130      ;
+; -2.201 ; baud_cnt[8]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.130      ;
+; -2.189 ; baud_cnt[12] ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.118      ;
+; -2.189 ; baud_cnt[12] ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.118      ;
+; -2.189 ; baud_cnt[12] ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.118      ;
+; -2.189 ; baud_cnt[12] ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.118      ;
+; -2.189 ; baud_cnt[12] ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.118      ;
+; -2.189 ; baud_cnt[12] ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.118      ;
+; -2.189 ; baud_cnt[12] ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.118      ;
+; -2.189 ; baud_cnt[12] ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.118      ;
+; -2.189 ; baud_cnt[12] ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.118      ;
+; -2.189 ; baud_cnt[12] ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.118      ;
+; -2.140 ; baud_cnt[4]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.069      ;
+; -2.140 ; baud_cnt[4]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.069      ;
+; -2.140 ; baud_cnt[4]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.069      ;
+; -2.140 ; baud_cnt[4]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.069      ;
+; -2.140 ; baud_cnt[4]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.069      ;
+; -2.140 ; baud_cnt[4]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.069      ;
+; -2.140 ; baud_cnt[4]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.069      ;
+; -2.140 ; baud_cnt[4]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.069      ;
+; -2.140 ; baud_cnt[4]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.069      ;
+; -2.140 ; baud_cnt[4]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.069      ;
+; -2.111 ; baud_cnt[1]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.040      ;
+; -2.111 ; baud_cnt[1]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.040      ;
+; -2.111 ; baud_cnt[1]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.040      ;
+; -2.111 ; baud_cnt[1]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.040      ;
+; -2.111 ; baud_cnt[1]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.040      ;
+; -2.111 ; baud_cnt[1]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.040      ;
+; -2.111 ; baud_cnt[1]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.040      ;
+; -2.111 ; baud_cnt[1]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.040      ;
+; -2.111 ; baud_cnt[1]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.040      ;
+; -2.111 ; baud_cnt[1]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.040      ;
+; -2.077 ; baud_cnt[3]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.006      ;
+; -2.077 ; baud_cnt[3]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.006      ;
+; -2.077 ; baud_cnt[3]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.006      ;
+; -2.077 ; baud_cnt[3]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.006      ;
+; -2.077 ; baud_cnt[3]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.006      ;
+; -2.077 ; baud_cnt[3]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.006      ;
+; -2.077 ; baud_cnt[3]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.006      ;
+; -2.077 ; baud_cnt[3]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.006      ;
+; -2.077 ; baud_cnt[3]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.006      ;
+; -2.077 ; baud_cnt[3]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 3.006      ;
+; -2.014 ; baud_cnt[2]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.943      ;
+; -2.014 ; baud_cnt[2]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.943      ;
+; -2.014 ; baud_cnt[2]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.943      ;
+; -2.014 ; baud_cnt[2]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.943      ;
+; -2.014 ; baud_cnt[2]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.943      ;
+; -2.014 ; baud_cnt[2]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.943      ;
+; -2.014 ; baud_cnt[2]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.943      ;
+; -2.014 ; baud_cnt[2]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.943      ;
+; -2.014 ; baud_cnt[2]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.943      ;
+; -2.014 ; baud_cnt[2]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.943      ;
+; -1.973 ; baud_cnt[10] ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.902      ;
+; -1.973 ; baud_cnt[10] ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.902      ;
+; -1.973 ; baud_cnt[10] ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.902      ;
+; -1.973 ; baud_cnt[10] ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.902      ;
+; -1.973 ; baud_cnt[10] ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.902      ;
+; -1.973 ; baud_cnt[10] ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.902      ;
+; -1.973 ; baud_cnt[10] ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.902      ;
+; -1.973 ; baud_cnt[10] ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.902      ;
+; -1.973 ; baud_cnt[10] ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.902      ;
+; -1.973 ; baud_cnt[10] ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 2.902      ;
++--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'sys_clk'                                                                          ;
++-------+--------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.401 ; work_flag    ; work_flag        ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.669      ;
+; 0.468 ; baud_cnt[12] ; baud_cnt[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.736      ;
+; 0.474 ; data_reg[1]  ; data_out[1]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.074      ; 0.743      ;
+; 0.475 ; data_reg[2]  ; data_out[2]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.074      ; 0.744      ;
+; 0.476 ; re_reg2      ; re_reg3          ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.744      ;
+; 0.477 ; data_reg[1]  ; data_reg[0]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.074      ; 0.746      ;
+; 0.477 ; data_reg[6]  ; data_out[6]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.074      ; 0.746      ;
+; 0.477 ; data_reg[6]  ; data_reg[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.074      ; 0.746      ;
+; 0.478 ; data_reg[2]  ; data_reg[1]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.074      ; 0.747      ;
+; 0.492 ; work_flag    ; start_flag       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.760      ;
+; 0.553 ; baud_cnt[5]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 1.287      ;
+; 0.564 ; baud_cnt[8]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 1.298      ;
+; 0.576 ; baud_cnt[4]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 1.310      ;
+; 0.597 ; re_reg1      ; re_reg2          ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.865      ;
+; 0.605 ; data_reg[7]  ; data_reg[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.074      ; 0.874      ;
+; 0.606 ; data_reg[4]  ; data_out[4]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.074      ; 0.875      ;
+; 0.606 ; data_reg[7]  ; data_out[7]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.074      ; 0.875      ;
+; 0.620 ; data_reg[5]  ; data_reg[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.074      ; 0.889      ;
+; 0.623 ; re_reg3      ; start_flag       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.891      ;
+; 0.626 ; data_reg[5]  ; data_out[5]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.894      ;
+; 0.629 ; data_reg[0]  ; data_out[0]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.897      ;
+; 0.652 ; data_reg[4]  ; data_reg[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.074      ; 0.921      ;
+; 0.662 ; baud_cnt[7]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 1.396      ;
+; 0.663 ; re_reg3      ; data_reg[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.074      ; 0.932      ;
+; 0.672 ; baud_cnt[3]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 1.406      ;
+; 0.678 ; baud_cnt[6]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.092      ; 0.965      ;
+; 0.688 ; start_flag   ; work_flag        ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.956      ;
+; 0.688 ; baud_cnt[2]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 1.422      ;
+; 0.694 ; baud_cnt[3]  ; baud_cnt[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.962      ;
+; 0.695 ; baud_cnt[5]  ; baud_cnt[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.963      ;
+; 0.695 ; baud_cnt[9]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.092      ; 0.982      ;
+; 0.698 ; baud_cnt[2]  ; baud_cnt[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.966      ;
+; 0.702 ; bit_cnt[3]   ; bit_cnt[3]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.970      ;
+; 0.703 ; bit_cnt[1]   ; bit_cnt[1]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.971      ;
+; 0.705 ; baud_cnt[1]  ; baud_cnt[1]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.973      ;
+; 0.706 ; baud_cnt[11] ; baud_cnt[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.974      ;
+; 0.708 ; baud_cnt[4]  ; baud_cnt[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.976      ;
+; 0.709 ; baud_cnt[7]  ; baud_cnt[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.977      ;
+; 0.711 ; baud_cnt[10] ; baud_cnt[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.979      ;
+; 0.712 ; baud_cnt[8]  ; baud_cnt[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.980      ;
+; 0.715 ; baud_cnt[0]  ; baud_cnt[0]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.092      ; 1.002      ;
+; 0.718 ; bit_cnt[2]   ; bit_cnt[2]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.986      ;
+; 0.731 ; read_flag    ; bit_cnt[0]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.999      ;
+; 0.772 ; baud_cnt[5]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 1.506      ;
+; 0.773 ; re_reg2      ; start_flag       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.041      ;
+; 0.805 ; baud_cnt[1]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 1.539      ;
+; 0.805 ; baud_cnt[4]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 1.539      ;
+; 0.819 ; data_reg[3]  ; data_out[3]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.074      ; 1.088      ;
+; 0.820 ; data_reg[3]  ; data_reg[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.074      ; 1.089      ;
+; 0.881 ; bit_cnt[0]   ; bit_cnt[0]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.149      ;
+; 0.890 ; baud_cnt[3]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 1.624      ;
+; 0.917 ; baud_cnt[2]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 1.651      ;
+; 1.016 ; baud_cnt[3]  ; baud_cnt[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.284      ;
+; 1.017 ; baud_cnt[2]  ; baud_cnt[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.285      ;
+; 1.020 ; baud_cnt[1]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 1.754      ;
+; 1.027 ; baud_cnt[1]  ; baud_cnt[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.295      ;
+; 1.027 ; bit_cnt[1]   ; bit_cnt[2]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.295      ;
+; 1.027 ; baud_cnt[4]  ; baud_cnt[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.295      ;
+; 1.028 ; baud_cnt[11] ; baud_cnt[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.296      ;
+; 1.029 ; baud_cnt[10] ; baud_cnt[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.297      ;
+; 1.030 ; read_flag    ; bit_cnt[1]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.298      ;
+; 1.032 ; baud_cnt[2]  ; baud_cnt[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.300      ;
+; 1.033 ; baud_cnt[7]  ; baud_cnt[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.301      ;
+; 1.037 ; bit_cnt[2]   ; bit_cnt[3]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.305      ;
+; 1.045 ; baud_cnt[10] ; baud_cnt[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.313      ;
+; 1.046 ; work_flag    ; bit_cnt[2]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.314      ;
+; 1.046 ; work_flag    ; bit_cnt[3]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.314      ;
+; 1.046 ; work_flag    ; bit_cnt[1]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.314      ;
+; 1.046 ; work_flag    ; bit_cnt[0]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.314      ;
+; 1.046 ; baud_cnt[8]  ; baud_cnt[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.314      ;
+; 1.046 ; read_flag    ; bit_cnt[2]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.314      ;
+; 1.112 ; bit_cnt[2]   ; work_flag        ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.380      ;
+; 1.112 ; baud_cnt[3]  ; baud_cnt[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.380      ;
+; 1.116 ; baud_cnt[5]  ; baud_cnt[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.384      ;
+; 1.119 ; baud_cnt[6]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.092      ; 1.406      ;
+; 1.120 ; baud_cnt[1]  ; baud_cnt[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.388      ;
+; 1.127 ; bit_cnt[1]   ; bit_cnt[3]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.395      ;
+; 1.139 ; baud_cnt[2]  ; baud_cnt[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.407      ;
+; 1.141 ; baud_cnt[5]  ; baud_cnt[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.409      ;
+; 1.149 ; baud_cnt[1]  ; baud_cnt[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.417      ;
+; 1.149 ; baud_cnt[4]  ; baud_cnt[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.417      ;
+; 1.152 ; baud_cnt[8]  ; baud_cnt[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.420      ;
+; 1.152 ; read_flag    ; bit_cnt[3]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.420      ;
+; 1.155 ; baud_cnt[7]  ; baud_cnt[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.423      ;
+; 1.164 ; baud_cnt[4]  ; baud_cnt[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.432      ;
+; 1.168 ; baud_cnt[8]  ; baud_cnt[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.436      ;
+; 1.185 ; bit_cnt[0]   ; bit_cnt[1]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.453      ;
+; 1.234 ; baud_cnt[3]  ; baud_cnt[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.502      ;
+; 1.242 ; baud_cnt[1]  ; baud_cnt[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.510      ;
+; 1.250 ; baud_cnt[7]  ; baud_cnt[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.518      ;
+; 1.257 ; bit_cnt[0]   ; bit_cnt[2]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.525      ;
+; 1.260 ; baud_cnt[3]  ; baud_cnt[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.528      ;
+; 1.261 ; baud_cnt[2]  ; baud_cnt[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.529      ;
+; 1.263 ; baud_cnt[5]  ; baud_cnt[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.531      ;
+; 1.265 ; baud_cnt[12] ; read_flag        ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.533      ;
+; 1.269 ; baud_cnt[0]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.092      ; 1.556      ;
+; 1.272 ; work_flag    ; baud_cnt[0]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 2.006      ;
+; 1.272 ; work_flag    ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 2.006      ;
+; 1.272 ; work_flag    ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.539      ; 2.006      ;
+; 1.273 ; bit_cnt[3]   ; work_flag        ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.541      ;
++-------+--------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'sys_clk'                                                 ;
++--------+--------------+----------------+------------------+---------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+---------+------------+------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; sys_clk ; Rise       ; sys_clk          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[0]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[10]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[11]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[12]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[1]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[2]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[3]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[4]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[5]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[6]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[7]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[8]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; baud_cnt[9]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; bit_cnt[0]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; bit_cnt[1]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; bit_cnt[2]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; bit_cnt[3]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[0]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[1]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[2]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[3]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[4]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[5]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[6]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_out[7]~reg0 ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[0]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[1]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[2]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[3]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[4]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[5]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[6]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; data_reg[7]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; re_reg1          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; re_reg2          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; re_reg3          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; read_flag        ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; start_flag       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; work_flag        ;
+; 0.228  ; 0.444        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[0]      ;
+; 0.228  ; 0.444        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[6]      ;
+; 0.228  ; 0.444        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[9]      ;
+; 0.272  ; 0.488        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_out[1]~reg0 ;
+; 0.272  ; 0.488        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_out[2]~reg0 ;
+; 0.272  ; 0.488        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_out[3]~reg0 ;
+; 0.272  ; 0.488        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_out[4]~reg0 ;
+; 0.272  ; 0.488        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_out[6]~reg0 ;
+; 0.272  ; 0.488        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_out[7]~reg0 ;
+; 0.272  ; 0.488        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[0]      ;
+; 0.272  ; 0.488        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[1]      ;
+; 0.272  ; 0.488        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[2]      ;
+; 0.272  ; 0.488        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[3]      ;
+; 0.272  ; 0.488        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[4]      ;
+; 0.272  ; 0.488        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[5]      ;
+; 0.272  ; 0.488        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[6]      ;
+; 0.272  ; 0.488        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_reg[7]      ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[10]     ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[11]     ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[12]     ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[1]      ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[2]      ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[3]      ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[4]      ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[5]      ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[7]      ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; baud_cnt[8]      ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; bit_cnt[0]       ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; bit_cnt[1]       ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; bit_cnt[2]       ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; bit_cnt[3]       ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_out[0]~reg0 ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; data_out[5]~reg0 ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; re_reg1          ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; re_reg2          ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; re_reg3          ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; read_flag        ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; start_flag       ;
+; 0.273  ; 0.489        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; work_flag        ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; bit_cnt[0]       ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; bit_cnt[1]       ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; bit_cnt[2]       ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; bit_cnt[3]       ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_out[0]~reg0 ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_out[1]~reg0 ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_out[2]~reg0 ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_out[3]~reg0 ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_out[4]~reg0 ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_out[5]~reg0 ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_out[6]~reg0 ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_out[7]~reg0 ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_reg[0]      ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_reg[1]      ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_reg[2]      ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_reg[3]      ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_reg[4]      ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_reg[5]      ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_reg[6]      ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; data_reg[7]      ;
+; 0.325  ; 0.509        ; 0.184          ; Low Pulse Width  ; sys_clk ; Rise       ; re_reg1          ;
++--------+--------------+----------------+------------------+---------+------------+------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; rx        ; sys_clk    ; 0.279 ; 0.551 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Hold Times                                                             ;
++-----------+------------+-------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+--------+------------+-----------------+
+; rx        ; sys_clk    ; 0.071 ; -0.182 ; Rise       ; sys_clk         ;
++-----------+------------+-------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; data_out[*]  ; sys_clk    ; 6.441 ; 6.223 ; Rise       ; sys_clk         ;
+;  data_out[0] ; sys_clk    ; 6.146 ; 6.017 ; Rise       ; sys_clk         ;
+;  data_out[1] ; sys_clk    ; 6.104 ; 5.972 ; Rise       ; sys_clk         ;
+;  data_out[2] ; sys_clk    ; 6.119 ; 5.987 ; Rise       ; sys_clk         ;
+;  data_out[3] ; sys_clk    ; 6.145 ; 6.010 ; Rise       ; sys_clk         ;
+;  data_out[4] ; sys_clk    ; 6.441 ; 6.223 ; Rise       ; sys_clk         ;
+;  data_out[5] ; sys_clk    ; 6.165 ; 6.013 ; Rise       ; sys_clk         ;
+;  data_out[6] ; sys_clk    ; 6.177 ; 6.040 ; Rise       ; sys_clk         ;
+;  data_out[7] ; sys_clk    ; 6.152 ; 6.005 ; Rise       ; sys_clk         ;
+; valid_flag   ; sys_clk    ; 6.236 ; 6.446 ; Rise       ; sys_clk         ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; data_out[*]  ; sys_clk    ; 5.876 ; 5.747 ; Rise       ; sys_clk         ;
+;  data_out[0] ; sys_clk    ; 5.919 ; 5.793 ; Rise       ; sys_clk         ;
+;  data_out[1] ; sys_clk    ; 5.876 ; 5.747 ; Rise       ; sys_clk         ;
+;  data_out[2] ; sys_clk    ; 5.891 ; 5.762 ; Rise       ; sys_clk         ;
+;  data_out[3] ; sys_clk    ; 5.916 ; 5.785 ; Rise       ; sys_clk         ;
+;  data_out[4] ; sys_clk    ; 6.201 ; 5.990 ; Rise       ; sys_clk         ;
+;  data_out[5] ; sys_clk    ; 5.936 ; 5.789 ; Rise       ; sys_clk         ;
+;  data_out[6] ; sys_clk    ; 5.947 ; 5.815 ; Rise       ; sys_clk         ;
+;  data_out[7] ; sys_clk    ; 5.922 ; 5.780 ; Rise       ; sys_clk         ;
+; valid_flag   ; sys_clk    ; 6.002 ; 6.205 ; Rise       ; sys_clk         ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++---------+--------+-----------------+
+; Clock   ; Slack  ; End Point TNS   ;
++---------+--------+-----------------+
+; sys_clk ; -0.514 ; -9.563          ;
++---------+--------+-----------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++---------+-------+-----------------+
+; Clock   ; Slack ; End Point TNS   ;
++---------+-------+-----------------+
+; sys_clk ; 0.186 ; 0.000           ;
++---------+-------+-----------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++---------+--------+-------------------------------+
+; Clock   ; Slack  ; End Point TNS                 ;
++---------+--------+-------------------------------+
+; sys_clk ; -3.000 ; -44.513                       ;
++---------+--------+-------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'sys_clk'                                                                      ;
++--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; -0.514 ; baud_cnt[11] ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.464      ;
+; -0.514 ; baud_cnt[11] ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.464      ;
+; -0.514 ; baud_cnt[11] ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.464      ;
+; -0.514 ; baud_cnt[11] ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.464      ;
+; -0.514 ; baud_cnt[11] ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.464      ;
+; -0.514 ; baud_cnt[11] ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.464      ;
+; -0.514 ; baud_cnt[11] ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.464      ;
+; -0.514 ; baud_cnt[11] ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.464      ;
+; -0.514 ; baud_cnt[11] ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.464      ;
+; -0.514 ; baud_cnt[11] ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.464      ;
+; -0.478 ; baud_cnt[0]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.227      ;
+; -0.478 ; baud_cnt[0]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.227      ;
+; -0.478 ; baud_cnt[0]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.227      ;
+; -0.478 ; baud_cnt[0]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.227      ;
+; -0.478 ; baud_cnt[0]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.227      ;
+; -0.478 ; baud_cnt[0]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.227      ;
+; -0.478 ; baud_cnt[0]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.227      ;
+; -0.478 ; baud_cnt[0]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.227      ;
+; -0.478 ; baud_cnt[0]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.227      ;
+; -0.478 ; baud_cnt[0]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.227      ;
+; -0.475 ; baud_cnt[8]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.425      ;
+; -0.475 ; baud_cnt[8]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.425      ;
+; -0.475 ; baud_cnt[8]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.425      ;
+; -0.475 ; baud_cnt[8]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.425      ;
+; -0.475 ; baud_cnt[8]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.425      ;
+; -0.475 ; baud_cnt[8]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.425      ;
+; -0.475 ; baud_cnt[8]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.425      ;
+; -0.475 ; baud_cnt[8]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.425      ;
+; -0.475 ; baud_cnt[8]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.425      ;
+; -0.475 ; baud_cnt[8]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.425      ;
+; -0.445 ; baud_cnt[6]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.194      ;
+; -0.445 ; baud_cnt[6]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.194      ;
+; -0.445 ; baud_cnt[6]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.194      ;
+; -0.445 ; baud_cnt[6]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.194      ;
+; -0.445 ; baud_cnt[6]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.194      ;
+; -0.445 ; baud_cnt[6]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.194      ;
+; -0.445 ; baud_cnt[6]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.194      ;
+; -0.445 ; baud_cnt[6]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.194      ;
+; -0.445 ; baud_cnt[6]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.194      ;
+; -0.445 ; baud_cnt[6]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.194      ;
+; -0.415 ; baud_cnt[12] ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.365      ;
+; -0.415 ; baud_cnt[12] ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.365      ;
+; -0.415 ; baud_cnt[12] ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.365      ;
+; -0.415 ; baud_cnt[12] ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.365      ;
+; -0.415 ; baud_cnt[12] ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.365      ;
+; -0.415 ; baud_cnt[12] ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.365      ;
+; -0.415 ; baud_cnt[12] ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.365      ;
+; -0.415 ; baud_cnt[12] ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.365      ;
+; -0.415 ; baud_cnt[12] ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.365      ;
+; -0.415 ; baud_cnt[12] ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.365      ;
+; -0.403 ; baud_cnt[4]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.353      ;
+; -0.403 ; baud_cnt[4]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.353      ;
+; -0.403 ; baud_cnt[4]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.353      ;
+; -0.403 ; baud_cnt[4]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.353      ;
+; -0.403 ; baud_cnt[4]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.353      ;
+; -0.403 ; baud_cnt[4]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.353      ;
+; -0.403 ; baud_cnt[4]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.353      ;
+; -0.403 ; baud_cnt[4]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.353      ;
+; -0.403 ; baud_cnt[4]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.353      ;
+; -0.403 ; baud_cnt[4]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.353      ;
+; -0.389 ; baud_cnt[1]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.339      ;
+; -0.389 ; baud_cnt[1]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.339      ;
+; -0.389 ; baud_cnt[1]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.339      ;
+; -0.389 ; baud_cnt[1]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.339      ;
+; -0.389 ; baud_cnt[1]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.339      ;
+; -0.389 ; baud_cnt[1]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.339      ;
+; -0.389 ; baud_cnt[1]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.339      ;
+; -0.389 ; baud_cnt[1]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.339      ;
+; -0.389 ; baud_cnt[1]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.339      ;
+; -0.389 ; baud_cnt[1]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.339      ;
+; -0.387 ; baud_cnt[3]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.337      ;
+; -0.387 ; baud_cnt[3]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.337      ;
+; -0.387 ; baud_cnt[3]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.337      ;
+; -0.387 ; baud_cnt[3]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.337      ;
+; -0.387 ; baud_cnt[3]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.337      ;
+; -0.387 ; baud_cnt[3]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.337      ;
+; -0.387 ; baud_cnt[3]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.337      ;
+; -0.387 ; baud_cnt[3]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.337      ;
+; -0.387 ; baud_cnt[3]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.337      ;
+; -0.387 ; baud_cnt[3]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.337      ;
+; -0.361 ; baud_cnt[2]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.311      ;
+; -0.361 ; baud_cnt[2]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.311      ;
+; -0.361 ; baud_cnt[2]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.311      ;
+; -0.361 ; baud_cnt[2]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.311      ;
+; -0.361 ; baud_cnt[2]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.311      ;
+; -0.361 ; baud_cnt[2]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.311      ;
+; -0.361 ; baud_cnt[2]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.311      ;
+; -0.361 ; baud_cnt[2]  ; baud_cnt[8]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.311      ;
+; -0.361 ; baud_cnt[2]  ; baud_cnt[11] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.311      ;
+; -0.361 ; baud_cnt[2]  ; baud_cnt[12] ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 1.311      ;
+; -0.321 ; baud_cnt[11] ; baud_cnt[0]  ; sys_clk      ; sys_clk     ; 1.000        ; 0.156      ; 1.464      ;
+; -0.321 ; baud_cnt[11] ; baud_cnt[6]  ; sys_clk      ; sys_clk     ; 1.000        ; 0.156      ; 1.464      ;
+; -0.321 ; baud_cnt[11] ; baud_cnt[9]  ; sys_clk      ; sys_clk     ; 1.000        ; 0.156      ; 1.464      ;
+; -0.309 ; baud_cnt[9]  ; baud_cnt[7]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.058      ;
+; -0.309 ; baud_cnt[9]  ; baud_cnt[1]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.058      ;
+; -0.309 ; baud_cnt[9]  ; baud_cnt[4]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.058      ;
+; -0.309 ; baud_cnt[9]  ; baud_cnt[2]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.058      ;
+; -0.309 ; baud_cnt[9]  ; baud_cnt[3]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.058      ;
+; -0.309 ; baud_cnt[9]  ; baud_cnt[10] ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.058      ;
+; -0.309 ; baud_cnt[9]  ; baud_cnt[5]  ; sys_clk      ; sys_clk     ; 1.000        ; -0.238     ; 1.058      ;
++--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'sys_clk'                                                                          ;
++-------+--------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.186 ; work_flag    ; work_flag        ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.307      ;
+; 0.195 ; data_reg[1]  ; data_out[1]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.316      ;
+; 0.196 ; re_reg2      ; re_reg3          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.317      ;
+; 0.197 ; data_reg[2]  ; data_out[2]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.318      ;
+; 0.198 ; data_reg[6]  ; data_out[6]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.319      ;
+; 0.198 ; data_reg[6]  ; data_reg[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.319      ;
+; 0.199 ; data_reg[1]  ; data_reg[0]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.320      ;
+; 0.199 ; data_reg[2]  ; data_reg[1]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.320      ;
+; 0.203 ; baud_cnt[12] ; baud_cnt[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.324      ;
+; 0.221 ; work_flag    ; start_flag       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.342      ;
+; 0.246 ; baud_cnt[5]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.568      ;
+; 0.251 ; re_reg1      ; re_reg2          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.372      ;
+; 0.257 ; data_reg[7]  ; data_reg[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.378      ;
+; 0.258 ; data_reg[4]  ; data_out[4]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.379      ;
+; 0.258 ; data_reg[7]  ; data_out[7]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.379      ;
+; 0.264 ; baud_cnt[8]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.586      ;
+; 0.265 ; baud_cnt[4]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.587      ;
+; 0.265 ; re_reg3      ; start_flag       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.386      ;
+; 0.266 ; data_reg[5]  ; data_reg[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.387      ;
+; 0.269 ; data_reg[0]  ; data_out[0]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.390      ;
+; 0.270 ; data_reg[5]  ; data_out[5]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.391      ;
+; 0.271 ; data_reg[4]  ; data_reg[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.392      ;
+; 0.281 ; re_reg3      ; data_reg[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.402      ;
+; 0.291 ; baud_cnt[6]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.045      ; 0.420      ;
+; 0.294 ; start_flag   ; work_flag        ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.415      ;
+; 0.298 ; baud_cnt[3]  ; baud_cnt[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.419      ;
+; 0.298 ; baud_cnt[5]  ; baud_cnt[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.419      ;
+; 0.300 ; baud_cnt[2]  ; baud_cnt[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.421      ;
+; 0.301 ; baud_cnt[9]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.045      ; 0.430      ;
+; 0.302 ; bit_cnt[3]   ; bit_cnt[3]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.423      ;
+; 0.303 ; bit_cnt[1]   ; bit_cnt[1]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.424      ;
+; 0.304 ; baud_cnt[1]  ; baud_cnt[1]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; baud_cnt[11] ; baud_cnt[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.425      ;
+; 0.305 ; baud_cnt[7]  ; baud_cnt[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; baud_cnt[4]  ; baud_cnt[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.426      ;
+; 0.307 ; baud_cnt[10] ; baud_cnt[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.428      ;
+; 0.307 ; baud_cnt[8]  ; baud_cnt[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.428      ;
+; 0.309 ; baud_cnt[0]  ; baud_cnt[0]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.045      ; 0.438      ;
+; 0.311 ; bit_cnt[2]   ; bit_cnt[2]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.432      ;
+; 0.311 ; read_flag    ; bit_cnt[0]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.432      ;
+; 0.312 ; baud_cnt[3]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.634      ;
+; 0.316 ; baud_cnt[7]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.638      ;
+; 0.326 ; baud_cnt[2]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.648      ;
+; 0.332 ; re_reg2      ; start_flag       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.453      ;
+; 0.366 ; data_reg[3]  ; data_out[3]~reg0 ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.487      ;
+; 0.367 ; data_reg[3]  ; data_reg[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.488      ;
+; 0.375 ; baud_cnt[5]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.697      ;
+; 0.384 ; bit_cnt[0]   ; bit_cnt[0]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.505      ;
+; 0.384 ; baud_cnt[1]  ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.706      ;
+; 0.394 ; baud_cnt[4]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.716      ;
+; 0.410 ; work_flag    ; bit_cnt[2]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.531      ;
+; 0.410 ; work_flag    ; bit_cnt[3]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.531      ;
+; 0.410 ; work_flag    ; bit_cnt[1]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.531      ;
+; 0.410 ; work_flag    ; bit_cnt[0]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.531      ;
+; 0.441 ; baud_cnt[3]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.763      ;
+; 0.447 ; baud_cnt[3]  ; baud_cnt[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.568      ;
+; 0.452 ; bit_cnt[1]   ; bit_cnt[2]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.573      ;
+; 0.453 ; baud_cnt[11] ; baud_cnt[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; baud_cnt[1]  ; baud_cnt[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.574      ;
+; 0.454 ; baud_cnt[7]  ; baud_cnt[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.575      ;
+; 0.455 ; baud_cnt[2]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.777      ;
+; 0.458 ; baud_cnt[2]  ; baud_cnt[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.579      ;
+; 0.461 ; baud_cnt[2]  ; baud_cnt[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.582      ;
+; 0.463 ; baud_cnt[4]  ; baud_cnt[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.584      ;
+; 0.464 ; read_flag    ; bit_cnt[1]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.585      ;
+; 0.465 ; baud_cnt[10] ; baud_cnt[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.586      ;
+; 0.467 ; read_flag    ; bit_cnt[2]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.588      ;
+; 0.468 ; baud_cnt[8]  ; baud_cnt[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.589      ;
+; 0.468 ; baud_cnt[10] ; baud_cnt[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.589      ;
+; 0.469 ; bit_cnt[2]   ; bit_cnt[3]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.590      ;
+; 0.510 ; baud_cnt[5]  ; baud_cnt[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.631      ;
+; 0.510 ; baud_cnt[3]  ; baud_cnt[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.631      ;
+; 0.513 ; baud_cnt[5]  ; baud_cnt[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.634      ;
+; 0.513 ; baud_cnt[1]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.835      ;
+; 0.515 ; baud_cnt[6]  ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.045      ; 0.644      ;
+; 0.515 ; bit_cnt[1]   ; bit_cnt[3]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.636      ;
+; 0.516 ; baud_cnt[1]  ; baud_cnt[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.637      ;
+; 0.519 ; bit_cnt[2]   ; work_flag        ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.640      ;
+; 0.519 ; baud_cnt[1]  ; baud_cnt[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.640      ;
+; 0.520 ; baud_cnt[7]  ; baud_cnt[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.641      ;
+; 0.524 ; baud_cnt[2]  ; baud_cnt[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.645      ;
+; 0.529 ; baud_cnt[4]  ; baud_cnt[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.650      ;
+; 0.530 ; read_flag    ; bit_cnt[3]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.651      ;
+; 0.531 ; baud_cnt[8]  ; baud_cnt[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.652      ;
+; 0.532 ; baud_cnt[4]  ; baud_cnt[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.653      ;
+; 0.534 ; baud_cnt[8]  ; baud_cnt[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.655      ;
+; 0.536 ; bit_cnt[0]   ; bit_cnt[1]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.657      ;
+; 0.539 ; bit_cnt[0]   ; bit_cnt[2]       ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.660      ;
+; 0.546 ; work_flag    ; baud_cnt[0]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.868      ;
+; 0.546 ; work_flag    ; baud_cnt[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.868      ;
+; 0.546 ; work_flag    ; baud_cnt[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.238      ; 0.868      ;
+; 0.547 ; bit_cnt[3]   ; work_flag        ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.668      ;
+; 0.565 ; baud_cnt[12] ; read_flag        ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.686      ;
+; 0.576 ; baud_cnt[3]  ; baud_cnt[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.697      ;
+; 0.579 ; baud_cnt[5]  ; baud_cnt[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.700      ;
+; 0.579 ; baud_cnt[3]  ; baud_cnt[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.700      ;
+; 0.582 ; baud_cnt[1]  ; baud_cnt[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.703      ;
+; 0.583 ; baud_cnt[7]  ; baud_cnt[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.704      ;
+; 0.586 ; baud_cnt[7]  ; baud_cnt[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.707      ;
+; 0.590 ; baud_cnt[2]  ; baud_cnt[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.711      ;
++-------+--------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'sys_clk'                                                    ;
++--------+--------------+----------------+-----------------+---------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock   ; Clock Edge ; Target               ;
++--------+--------------+----------------+-----------------+---------+------------+----------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; sys_clk ; Rise       ; sys_clk              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; baud_cnt[0]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; baud_cnt[10]         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; baud_cnt[11]         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; baud_cnt[12]         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; baud_cnt[1]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; baud_cnt[2]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; baud_cnt[3]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; baud_cnt[4]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; baud_cnt[5]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; baud_cnt[6]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; baud_cnt[7]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; baud_cnt[8]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; baud_cnt[9]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; bit_cnt[0]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; bit_cnt[1]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; bit_cnt[2]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; bit_cnt[3]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_out[0]~reg0     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_out[1]~reg0     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_out[2]~reg0     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_out[3]~reg0     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_out[4]~reg0     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_out[5]~reg0     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_out[6]~reg0     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_out[7]~reg0     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_reg[0]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_reg[1]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_reg[2]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_reg[3]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_reg[4]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_reg[5]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_reg[6]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; data_reg[7]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; re_reg1              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; re_reg2              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; re_reg3              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; read_flag            ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; start_flag           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; work_flag            ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[0]          ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[6]          ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[9]          ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; bit_cnt[0]           ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; bit_cnt[1]           ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; bit_cnt[2]           ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; bit_cnt[3]           ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[0]~reg0     ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[1]~reg0     ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[2]~reg0     ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[3]~reg0     ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[4]~reg0     ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[5]~reg0     ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[6]~reg0     ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[7]~reg0     ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_reg[0]          ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_reg[1]          ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_reg[2]          ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_reg[3]          ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_reg[4]          ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_reg[5]          ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_reg[6]          ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; data_reg[7]          ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; re_reg1              ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; re_reg2              ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; re_reg3              ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; read_flag            ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; start_flag           ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; work_flag            ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[10]         ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[11]         ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[12]         ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[1]          ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[2]          ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[3]          ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[4]          ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[5]          ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[7]          ;
+; -0.062 ; 0.122        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[8]          ;
+; 0.095  ; 0.095        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[0]|clk      ;
+; 0.095  ; 0.095        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[6]|clk      ;
+; 0.095  ; 0.095        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; baud_cnt[9]|clk      ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; bit_cnt[0]|clk       ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; bit_cnt[1]|clk       ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; bit_cnt[2]|clk       ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; bit_cnt[3]|clk       ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[0]~reg0|clk ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[1]~reg0|clk ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[2]~reg0|clk ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[3]~reg0|clk ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[4]~reg0|clk ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[5]~reg0|clk ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[6]~reg0|clk ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; data_out[7]~reg0|clk ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; data_reg[0]|clk      ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; data_reg[1]|clk      ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; data_reg[2]|clk      ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; data_reg[3]|clk      ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; data_reg[4]|clk      ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width ; sys_clk ; Rise       ; data_reg[5]|clk      ;
++--------+--------------+----------------+-----------------+---------+------------+----------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; rx        ; sys_clk    ; 0.198 ; 0.479 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rx        ; sys_clk    ; -0.030 ; -0.308 ; Rise       ; sys_clk         ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; data_out[*]  ; sys_clk    ; 3.278 ; 3.329 ; Rise       ; sys_clk         ;
+;  data_out[0] ; sys_clk    ; 3.178 ; 3.219 ; Rise       ; sys_clk         ;
+;  data_out[1] ; sys_clk    ; 3.129 ; 3.171 ; Rise       ; sys_clk         ;
+;  data_out[2] ; sys_clk    ; 3.148 ; 3.189 ; Rise       ; sys_clk         ;
+;  data_out[3] ; sys_clk    ; 3.163 ; 3.205 ; Rise       ; sys_clk         ;
+;  data_out[4] ; sys_clk    ; 3.278 ; 3.329 ; Rise       ; sys_clk         ;
+;  data_out[5] ; sys_clk    ; 3.164 ; 3.206 ; Rise       ; sys_clk         ;
+;  data_out[6] ; sys_clk    ; 3.185 ; 3.228 ; Rise       ; sys_clk         ;
+;  data_out[7] ; sys_clk    ; 3.150 ; 3.194 ; Rise       ; sys_clk         ;
+; valid_flag   ; sys_clk    ; 3.317 ; 3.270 ; Rise       ; sys_clk         ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; data_out[*]  ; sys_clk    ; 3.029 ; 3.069 ; Rise       ; sys_clk         ;
+;  data_out[0] ; sys_clk    ; 3.078 ; 3.118 ; Rise       ; sys_clk         ;
+;  data_out[1] ; sys_clk    ; 3.029 ; 3.069 ; Rise       ; sys_clk         ;
+;  data_out[2] ; sys_clk    ; 3.048 ; 3.087 ; Rise       ; sys_clk         ;
+;  data_out[3] ; sys_clk    ; 3.062 ; 3.103 ; Rise       ; sys_clk         ;
+;  data_out[4] ; sys_clk    ; 3.173 ; 3.223 ; Rise       ; sys_clk         ;
+;  data_out[5] ; sys_clk    ; 3.063 ; 3.104 ; Rise       ; sys_clk         ;
+;  data_out[6] ; sys_clk    ; 3.084 ; 3.125 ; Rise       ; sys_clk         ;
+;  data_out[7] ; sys_clk    ; 3.049 ; 3.091 ; Rise       ; sys_clk         ;
+; valid_flag   ; sys_clk    ; 3.210 ; 3.164 ; Rise       ; sys_clk         ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.642  ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+;  sys_clk         ; -2.642  ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -70.05  ; 0.0   ; 0.0      ; 0.0     ; -60.993             ;
+;  sys_clk         ; -70.050 ; 0.000 ; N/A      ; N/A     ; -60.993             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; rx        ; sys_clk    ; 0.320 ; 0.551 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Hold Times                                                             ;
++-----------+------------+-------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+--------+------------+-----------------+
+; rx        ; sys_clk    ; 0.071 ; -0.065 ; Rise       ; sys_clk         ;
++-----------+------------+-------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; data_out[*]  ; sys_clk    ; 7.047 ; 6.891 ; Rise       ; sys_clk         ;
+;  data_out[0] ; sys_clk    ; 6.748 ; 6.656 ; Rise       ; sys_clk         ;
+;  data_out[1] ; sys_clk    ; 6.704 ; 6.610 ; Rise       ; sys_clk         ;
+;  data_out[2] ; sys_clk    ; 6.722 ; 6.626 ; Rise       ; sys_clk         ;
+;  data_out[3] ; sys_clk    ; 6.744 ; 6.650 ; Rise       ; sys_clk         ;
+;  data_out[4] ; sys_clk    ; 7.047 ; 6.891 ; Rise       ; sys_clk         ;
+;  data_out[5] ; sys_clk    ; 6.759 ; 6.653 ; Rise       ; sys_clk         ;
+;  data_out[6] ; sys_clk    ; 6.780 ; 6.684 ; Rise       ; sys_clk         ;
+;  data_out[7] ; sys_clk    ; 6.750 ; 6.647 ; Rise       ; sys_clk         ;
+; valid_flag   ; sys_clk    ; 6.904 ; 7.067 ; Rise       ; sys_clk         ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; data_out[*]  ; sys_clk    ; 3.029 ; 3.069 ; Rise       ; sys_clk         ;
+;  data_out[0] ; sys_clk    ; 3.078 ; 3.118 ; Rise       ; sys_clk         ;
+;  data_out[1] ; sys_clk    ; 3.029 ; 3.069 ; Rise       ; sys_clk         ;
+;  data_out[2] ; sys_clk    ; 3.048 ; 3.087 ; Rise       ; sys_clk         ;
+;  data_out[3] ; sys_clk    ; 3.062 ; 3.103 ; Rise       ; sys_clk         ;
+;  data_out[4] ; sys_clk    ; 3.173 ; 3.223 ; Rise       ; sys_clk         ;
+;  data_out[5] ; sys_clk    ; 3.063 ; 3.104 ; Rise       ; sys_clk         ;
+;  data_out[6] ; sys_clk    ; 3.084 ; 3.125 ; Rise       ; sys_clk         ;
+;  data_out[7] ; sys_clk    ; 3.049 ; 3.091 ; Rise       ; sys_clk         ;
+; valid_flag   ; sys_clk    ; 3.210 ; 3.164 ; Rise       ; sys_clk         ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; valid_flag    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; data_out[0]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; data_out[1]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; data_out[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; data_out[3]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; data_out[4]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; data_out[5]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; data_out[6]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; data_out[7]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; sys_clk                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst_n                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rx                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; valid_flag    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[7]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; valid_flag    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[7]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; valid_flag    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; data_out[7]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sys_clk    ; sys_clk  ; 403      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sys_clk    ; sys_clk  ; 403      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 40    ; 40   ;
+; Unconstrained Output Ports      ; 9     ; 9    ;
+; Unconstrained Output Port Paths ; 9     ; 9    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+    Info: Processing started: Mon Nov 06 20:04:58 2023
+Info: Command: quartus_sta UART -c UART
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (21077): Core supply voltage is 1.2V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'UART.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name sys_clk sys_clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.642
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.642             -70.050 sys_clk 
+Info (332146): Worst-case hold slack is 0.452
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.452               0.000 sys_clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -60.993 sys_clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.390
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.390             -62.703 sys_clk 
+Info (332146): Worst-case hold slack is 0.401
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.401               0.000 sys_clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -60.993 sys_clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.514
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.514              -9.563 sys_clk 
+Info (332146): Worst-case hold slack is 0.186
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.186               0.000 sys_clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -44.513 sys_clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4668 megabytes
+    Info: Processing ended: Mon Nov 06 20:05:00 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
