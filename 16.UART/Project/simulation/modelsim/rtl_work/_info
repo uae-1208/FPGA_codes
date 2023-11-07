@@ -9,21 +9,21 @@ z2
 cModel Technology
 Z0 dU:/Projects/FPGA/Examples/16.UART/Project/simulation/modelsim
 T_opt
-!s110 1699272548
-VIU_zbMR2h0NMFh3GKknA10
-04 5 4 work RX_TB fast 0
-=1-5405db4d15c6-6548d763-3cb-1380
+!s110 1699348689
+VN@k=AOImfDg:hLed6VGUB1
+04 7 4 work UART_TB fast 0
+=1-5405db4d15c6-654a00d1-7d-2b14
 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
 n@_opt
 OL;O;10.4;61
 vRX
-Z1 !s110 1699272546
+Z1 !s110 1699348685
 !i10b 1
 !s100 [bJ@A6DO6WLEKdgPdF_QY3
 IUIWR>WoOEMA;DEC;F8RV[2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1699270283
+w1699332613
 8U:/Projects/FPGA/Examples/16.UART/RTL/RX.v
 FU:/Projects/FPGA/Examples/16.UART/RTL/RX.v
 L0 1
@@ -31,32 +31,76 @@ Z3 OL;L;10.4;61
 r1
 !s85 0
 31
-!s108 1699272546.702000
+!s108 1699348685.646000
 !s107 U:/Projects/FPGA/Examples/16.UART/RTL/RX.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/16.UART/RTL|U:/Projects/FPGA/Examples/16.UART/RTL/RX.v|
 !i113 0
 Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/16.UART/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 !s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/16.UART/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 n@r@x
-vRX_TB
+vTX
 R1
 !i10b 1
-!s100 >[4Odokb>0:<NU1cdngk@1
-IfKodY>@A?=FO[o^hhRc>01
+!s100 nWZb91MDK5KnM^9bgS_c41
+ITQ1FHXKigS3V9^?PfcI4A2
 R2
 R0
-w1699272538
-8U:/Projects/FPGA/Examples/16.UART/Project/../Sim/RX_TB.v
-FU:/Projects/FPGA/Examples/16.UART/Project/../Sim/RX_TB.v
+w1699345783
+8U:/Projects/FPGA/Examples/16.UART/RTL/TX.v
+FU:/Projects/FPGA/Examples/16.UART/RTL/TX.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1699348685.529000
+!s107 U:/Projects/FPGA/Examples/16.UART/RTL/TX.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/16.UART/RTL|U:/Projects/FPGA/Examples/16.UART/RTL/TX.v|
+!i113 0
+R4
+R5
+n@t@x
+vUART
+R1
+!i10b 1
+!s100 d8BPlV4i_L8ll`V:FH6Lc3
+Ik7n?JGM0f7k3a4C2NaGi73
+R2
+R0
+w1699347960
+8U:/Projects/FPGA/Examples/16.UART/RTL/UART.v
+FU:/Projects/FPGA/Examples/16.UART/RTL/UART.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1699348685.402000
+!s107 U:/Projects/FPGA/Examples/16.UART/RTL/UART.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/16.UART/RTL|U:/Projects/FPGA/Examples/16.UART/RTL/UART.v|
+!i113 0
+R4
+R5
+n@u@a@r@t
+vUART_TB
+R1
+!i10b 1
+!s100 >izUPcPLh7jh>m3J?KSLK1
+I27Rdfn[IZJBkHXM81D>b;0
+R2
+R0
+w1699348677
+8U:/Projects/FPGA/Examples/16.UART/Project/../Sim/UART_TB.v
+FU:/Projects/FPGA/Examples/16.UART/Project/../Sim/UART_TB.v
 L0 3
 R3
 r1
 !s85 0
 31
-!s108 1699272546.825000
-!s107 U:/Projects/FPGA/Examples/16.UART/Project/../Sim/RX_TB.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/16.UART/Project/../Sim|U:/Projects/FPGA/Examples/16.UART/Project/../Sim/RX_TB.v|
+!s108 1699348685.758000
+!s107 U:/Projects/FPGA/Examples/16.UART/Project/../Sim/UART_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/16.UART/Project/../Sim|U:/Projects/FPGA/Examples/16.UART/Project/../Sim/UART_TB.v|
 !i113 0
 R4
 !s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/16.UART/Project/../Sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-n@r@x_@t@b
+n@u@a@r@t_@t@b

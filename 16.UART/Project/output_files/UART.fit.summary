@@ -1,15 +1,15 @@
-Fitter Status : Successful - Mon Nov 06 20:04:55 2023
+Fitter Status : Successful - Tue Nov 07 17:14:42 2023
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
 Revision Name : UART
-Top-level Entity Name : RX
+Top-level Entity Name : UART
 Family : Cyclone IV E
 Device : EP4CE10F17C8
 Timing Models : Final
-Total logic elements : 48 / 10,320 ( < 1 % )
-    Total combinational functions : 30 / 10,320 ( < 1 % )
-    Dedicated logic registers : 39 / 10,320 ( < 1 % )
-Total registers : 39
-Total pins : 12 / 180 ( 7 % )
+Total logic elements : 88 / 10,320 ( < 1 % )
+    Total combinational functions : 69 / 10,320 ( < 1 % )
+    Dedicated logic registers : 68 / 10,320 ( < 1 % )
+Total registers : 68
+Total pins : 5 / 180 ( 3 % )
 Total virtual pins : 0
 Total memory bits : 0 / 423,936 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )

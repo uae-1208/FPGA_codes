@@ -1,5 +1,5 @@
 Flow report for UART
-Mon Nov 06 20:05:02 2023
+Tue Nov 07 17:14:49 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 06 20:05:02 2023       ;
+; Flow Status                        ; Successful - Tue Nov 07 17:14:49 2023       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; UART                                        ;
-; Top-level Entity Name              ; RX                                          ;
+; Top-level Entity Name              ; UART                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE10F17C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 48 / 10,320 ( < 1 % )                       ;
-;     Total combinational functions  ; 30 / 10,320 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 39 / 10,320 ( < 1 % )                       ;
-; Total registers                    ; 39                                          ;
-; Total pins                         ; 12 / 180 ( 7 % )                            ;
+; Total logic elements               ; 88 / 10,320 ( < 1 % )                       ;
+;     Total combinational functions  ; 69 / 10,320 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 68 / 10,320 ( < 1 % )                       ;
+; Total registers                    ; 68                                          ;
+; Total pins                         ; 5 / 180 ( 3 % )                             ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 423,936 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 46 ( 0 % )                              ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/06/2023 20:04:49 ;
+; Start date & time ; 11/07/2023 17:14:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; UART                ;
 +-------------------+---------------------+
@@ -75,27 +75,36 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 92384130831814.169927228909392        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 92384130831814.169934847703364        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; RX_TB          ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; RX_TB                                 ; --            ; --          ; eda_simulation ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; TX_TB          ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; UART_TB        ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; UART_TB                               ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim (Verilog)                    ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_FILE                  ; ../Sim/RX_TB.v                        ; --            ; --          ; RX_TB          ;
+; EDA_TEST_BENCH_FILE                  ; ../Sim/TX_TB .v                       ; --            ; --          ; TX_TB          ;
+; EDA_TEST_BENCH_FILE                  ; ../Sim/UART_TB.v                      ; --            ; --          ; UART_TB        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; RX_TB                                 ; --            ; --          ; RX_TB          ;
+; EDA_TEST_BENCH_MODULE_NAME           ; TX_TB                                 ; --            ; --          ; TX_TB          ;
+; EDA_TEST_BENCH_MODULE_NAME           ; UART_TB                               ; --            ; --          ; UART_TB        ;
 ; EDA_TEST_BENCH_NAME                  ; RX_TB                                 ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; TX_TB                                 ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; UART_TB                               ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 us                                ; --            ; --          ; RX_TB          ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1 us                                  ; --            ; --          ; TX_TB          ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1 ms                                  ; --            ; --          ; UART_TB        ;
 ; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; RX          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; RX          ; Top            ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; RX          ; Top            ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; --          ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; RX                                    ; UART          ; --          ; --             ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
@@ -105,11 +114,11 @@ applicable agreement for further details.
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4639 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:04     ; 1.0                     ; 5356 MB             ; 00:00:04                           ;
+; Fitter                    ; 00:00:03     ; 1.8                     ; 5363 MB             ; 00:00:04                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 4578 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4668 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4552 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:09     ; --                      ; --                  ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4661 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4552 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:06     ; --                      ; --                  ; 00:00:09                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

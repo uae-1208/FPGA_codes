@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dU:/Projects/FPGA/Examples/16.UART/Project/simulation/modelsim
 valt_bidir_buf
-Z1 !s110 1699272543
+Z1 !s110 1699348681
 !i10b 1
 !s100 a6?6cHeC]_[b_;=i8O1hN3
 IQimU^dk9lLG7]90XQdHRj3
@@ -23,7 +23,7 @@ Z6 OL;L;10.4;61
 r1
 !s85 0
 31
-Z7 !s108 1699272542.945000
+Z7 !s108 1699348681.744000
 Z8 !s107 d:/altera/quartus ii 13.1/quartus/eda/sim_lib/altera_primitives.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|altera_ver|d:/altera/quartus ii 13.1/quartus/eda/sim_lib/altera_primitives.v|
 !i113 0
@@ -209,7 +209,7 @@ R9
 !i113 0
 R10
 vcarry
-Z11 !s110 1699272542
+R1
 !i10b 1
 !s100 FD@5kG0C:mLW@6I8nlO>Z2
 IG_5NEz[4f4;Z<?C`zF0NR0
@@ -229,7 +229,7 @@ R9
 !i113 0
 R10
 vcarry_sum
-R11
+R1
 !i10b 1
 !s100 AIWGZakUF8]V789[a`cWk3
 IXQ;hG@_]f_DR]K1mWMZzC1
@@ -249,7 +249,7 @@ R9
 !i113 0
 R10
 vcascade
-R11
+R1
 !i10b 1
 !s100 cQV1KYGA<9HX[CBYT^l:n1
 IZf=_bVZa6MWf53K1lM7Lg3
@@ -369,7 +369,7 @@ R9
 !i113 0
 R10
 vdlatch
-R11
+R1
 !i10b 1
 !s100 19hTO`Mo4V4id8RRoD5>70
 IRLmB?ljGmgG2Cn8NTzfS22
@@ -389,7 +389,7 @@ R9
 !i113 0
 R10
 vexp
-R11
+R1
 !i10b 1
 !s100 ?=3m4CE>YoSX13jbH8ogi1
 Io^Ed:53OP3ADUXbechYz]3
@@ -409,7 +409,7 @@ R9
 !i113 0
 R10
 vglobal
-R11
+R1
 !i10b 1
 !s100 lKmX7;gI`XO0>GV6il];01
 IcLhbCcRLNJd1cCBGE>_6i3
@@ -469,7 +469,7 @@ R9
 !i113 0
 R10
 vlatch
-R11
+R1
 !i10b 1
 !s100 6L<i:EM=Ceea7LcF^H3ol1
 I:^06Hz5NleeEFRKdD;0`X0
@@ -489,7 +489,7 @@ R9
 !i113 0
 R10
 vlut_input
-R11
+R1
 !i10b 1
 !s100 ;CRUY3Bm]JPg2bQRG^W580
 IloamFd]KNemA_G^YXi@Qz0
@@ -509,7 +509,7 @@ R9
 !i113 0
 R10
 vlut_output
-R11
+R1
 !i10b 1
 !s100 89:o4;F_XN6:`diQkd4HH0
 Id@i54XY4LJm=ZhO>dWM4F2
@@ -529,7 +529,7 @@ R9
 !i113 0
 R10
 vopndrn
-R11
+R1
 !i10b 1
 !s100 Q2]a2IlhiC3gXYN?;SeKV3
 IbCFV5AOCXleYK9oZ>z=EZ0
@@ -549,7 +549,7 @@ R9
 !i113 0
 R10
 vprim_gdff
-R11
+R1
 !i10b 1
 !s100 DIze=?0M_V1l2mlzIa<GD1
 I6gPRV32f>CzJEZ4>4_m0o1
@@ -671,7 +671,7 @@ R9
 !i113 0
 R10
 vrow_global
-R11
+R1
 !i10b 1
 !s100 0jQm6Khk6V:5;];PPXjl:0
 I]CD62gVKRbF=j4l81R_li0
@@ -691,7 +691,7 @@ R9
 !i113 0
 R10
 vsoft
-R11
+R1
 !i10b 1
 !s100 ;;iS>g<=H3GT6Kd?L3F?M3
 I:A0g`ejGe>z5hBM>:Hi_d1
@@ -791,7 +791,7 @@ R9
 !i113 0
 R10
 vTRI
-R11
+R1
 !i10b 1
 !s100 iA0`k<U35f`MYG^;nP1oG1
 I;U;oC?[hz463?fXZRGba33

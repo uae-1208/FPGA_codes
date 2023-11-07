@@ -33,13 +33,15 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/16.UART/RTL {U:/Projects/FPGA/Examples/16.UART/RTL/UART.v}
+vlog -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/16.UART/RTL {U:/Projects/FPGA/Examples/16.UART/RTL/TX.v}
 vlog -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/16.UART/RTL {U:/Projects/FPGA/Examples/16.UART/RTL/RX.v}
 
-vlog -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/16.UART/Project/../Sim {U:/Projects/FPGA/Examples/16.UART/Project/../Sim/RX_TB.v}
+vlog -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/16.UART/Project/../Sim {U:/Projects/FPGA/Examples/16.UART/Project/../Sim/UART_TB.v}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  RX_TB
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  UART_TB
 
 add wave *
 view structure
 view signals
-run 100 us
+run 1 ms

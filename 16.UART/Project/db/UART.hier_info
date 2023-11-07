@@ -1,4 +1,85 @@
-|RX
+|UART
+sys_clk => sys_clk.IN2
+rst_n => rst_n.IN2
+rx => rx.IN1
+busy_flag << TX:TX_inst.busy_flag
+tx << TX:TX_inst.tx
+
+
+|UART|TX:TX_inst
+sys_clk => tx~reg0.CLK
+sys_clk => data_reg[0].CLK
+sys_clk => data_reg[1].CLK
+sys_clk => data_reg[2].CLK
+sys_clk => data_reg[3].CLK
+sys_clk => data_reg[4].CLK
+sys_clk => data_reg[5].CLK
+sys_clk => data_reg[6].CLK
+sys_clk => data_reg[7].CLK
+sys_clk => bit_cnt[0].CLK
+sys_clk => bit_cnt[1].CLK
+sys_clk => bit_cnt[2].CLK
+sys_clk => bit_cnt[3].CLK
+sys_clk => baud_cnt[0].CLK
+sys_clk => baud_cnt[1].CLK
+sys_clk => baud_cnt[2].CLK
+sys_clk => baud_cnt[3].CLK
+sys_clk => baud_cnt[4].CLK
+sys_clk => baud_cnt[5].CLK
+sys_clk => baud_cnt[6].CLK
+sys_clk => baud_cnt[7].CLK
+sys_clk => baud_cnt[8].CLK
+sys_clk => baud_cnt[9].CLK
+sys_clk => baud_cnt[10].CLK
+sys_clk => baud_cnt[11].CLK
+sys_clk => baud_cnt[12].CLK
+sys_clk => work_flag.CLK
+sys_clk => start_flag.CLK
+sys_clk => en_reg.CLK
+rst_n => baud_cnt[0].ACLR
+rst_n => baud_cnt[1].ACLR
+rst_n => baud_cnt[2].ACLR
+rst_n => baud_cnt[3].ACLR
+rst_n => baud_cnt[4].ACLR
+rst_n => baud_cnt[5].ACLR
+rst_n => baud_cnt[6].ACLR
+rst_n => baud_cnt[7].ACLR
+rst_n => baud_cnt[8].ACLR
+rst_n => baud_cnt[9].ACLR
+rst_n => baud_cnt[10].ACLR
+rst_n => baud_cnt[11].ACLR
+rst_n => baud_cnt[12].ACLR
+rst_n => work_flag.ACLR
+rst_n => tx~reg0.PRESET
+rst_n => en_reg.ACLR
+rst_n => start_flag.ACLR
+rst_n => bit_cnt[0].ACLR
+rst_n => bit_cnt[1].ACLR
+rst_n => bit_cnt[2].ACLR
+rst_n => bit_cnt[3].ACLR
+rst_n => data_reg[0].ACLR
+rst_n => data_reg[1].ACLR
+rst_n => data_reg[2].ACLR
+rst_n => data_reg[3].ACLR
+rst_n => data_reg[4].ACLR
+rst_n => data_reg[5].ACLR
+rst_n => data_reg[6].ACLR
+rst_n => data_reg[7].ACLR
+data_in[0] => data_reg.DATAB
+data_in[1] => data_reg.DATAB
+data_in[2] => data_reg.DATAB
+data_in[3] => data_reg.DATAB
+data_in[4] => data_reg.DATAB
+data_in[5] => data_reg.DATAB
+data_in[6] => data_reg.DATAB
+data_in[7] => data_reg.DATAB
+tx_en => always1.IN1
+tx_en => en_reg.DATAIN
+busy_flag <= work_flag.DB_MAX_OUTPUT_PORT_TYPE
+tx <= tx~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|RX:RX_inst
 sys_clk => data_out[0]~reg0.CLK
 sys_clk => data_out[1]~reg0.CLK
 sys_clk => data_out[2]~reg0.CLK
@@ -78,14 +159,14 @@ rst_n => data_reg[5].ACLR
 rst_n => data_reg[6].ACLR
 rst_n => data_reg[7].ACLR
 rx => re_reg1.DATAIN
-valid_flag << work_flag.DB_MAX_OUTPUT_PORT_TYPE
-data_out[0] << data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[1] << data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[2] << data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[3] << data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[4] << data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[5] << data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[6] << data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[7] << data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+valid_flag <= work_flag.DB_MAX_OUTPUT_PORT_TYPE
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -14,7 +14,7 @@ module RX
     reg        work_flag;                  //工作标志位，拉高代表模块开始接受串行数据
     reg [12:0] baud_cnt;                   //波特率计数器
     reg        read_flag;                  //读取标志位，拉高表示串行数据可以被读取
-    reg [3:0]  bit_cnt;                    //接受比特计数器
+    reg [3:0]  bit_cnt;                    //接收比特计数器
     reg [7:0]  data_reg;                   //数据缓存
 
    
