@@ -8,6 +8,8 @@ module RX
 );  
 
     parameter Baud_9600 = 13'd5207;  //在50MHz的时钟下，计时1/9600s
+    parameter Baud_115200 = 13'd434; //在50MHz的时钟下，计时1/115200s
+    parameter read_cnt = Baud_115200 / 2;
     
     reg        re_reg1, re_reg2, re_reg3;  //reg1使异步的rx信号进行同步，reg2和reg3使避免亚稳态
     reg        start_flag;                 //开始标志位，接收到起始位后，拉高，滞后一个时钟周期
@@ -61,7 +63,7 @@ module RX
         if(rst_n == 1'b0) 
             baud_cnt <= 13'd0;
         else if(work_flag == 1'b1) begin 
-            if(baud_cnt == Baud_9600)
+            if(baud_cnt == Baud_115200)
                 baud_cnt <= 13'd0;
             else 
                 baud_cnt <= baud_cnt + 13'd1;
@@ -75,7 +77,7 @@ module RX
     always @(posedge sys_clk, negedge rst_n) begin
         if(rst_n == 1'b0) 
             read_flag <= 1'b0;
-        else if(baud_cnt == 13'd2500)       //在串行数据稳定时再读取，而不是跳变边沿
+        else if(baud_cnt == read_cnt)       //在串行数据稳定时再读取，而不是跳变边沿
             read_flag <= 1'b1;
         else   
             read_flag <= 1'b0;

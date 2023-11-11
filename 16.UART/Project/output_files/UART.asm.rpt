@@ -1,5 +1,5 @@
 Assembler report for UART
-Tue Nov 07 17:14:45 2023
+Sat Nov 11 20:07:01 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Nov 07 17:14:45 2023 ;
+; Assembler Status      ; Successful - Sat Nov 11 20:07:01 2023 ;
 ; Revision Name         ; UART                                  ;
 ; Top-level Entity Name ; UART                                  ;
 ; Family                ; Cyclone IV E                          ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                  ;
 +----------------+--------------------------------------------------------------------------+
 ; Device         ; EP4CE10F17C8                                                             ;
-; JTAG usercode  ; 0x00092496                                                               ;
-; Checksum       ; 0x00092496                                                               ;
+; JTAG usercode  ; 0x00092091                                                               ;
+; Checksum       ; 0x00092091                                                               ;
 +----------------+--------------------------------------------------------------------------+
 
 
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Tue Nov 07 17:14:44 2023
+    Info: Processing started: Sat Nov 11 20:07:01 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off UART -c UART
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4586 megabytes
-    Info: Processing ended: Tue Nov 07 17:14:45 2023
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sat Nov 11 20:07:01 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -39,7 +39,7 @@ module RX_TB();
     task rx_bit(input[7:0] data);
         integer i;   
         
-        for(i=0; i<11; i=i+1) begin
+        for(i=0; i<10; i=i+1) begin
             case(i)
                 0: rx <= 1'b0;
                 1: rx <= data[0];
@@ -51,9 +51,9 @@ module RX_TB();
                 7: rx <= data[6];
                 8: rx <= data[7];
                 9: rx <= 1'b1;
-                10: #(5208*59); //延时
+                //10: #(434*59); //延时
             endcase
-            #(5208*20); //每发送1位数据延时5208个时钟周期
+            #(434*20); //每发送1位数据延时5208个时钟周期
         end
     endtask         
 

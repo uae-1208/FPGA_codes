@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dU:/Projects/FPGA/Examples/16.UART/Project/simulation/modelsim
 vcycloneive_and1
-Z1 !s110 1699348684
+Z1 !s110 1699703837
 !i10b 1
 !s100 oT]7FkABD[F088N@X^z8]0
 I4oH9mjACIaJ_>zM<[1I=E0
@@ -23,7 +23,7 @@ Z6 OL;L;10.4;61
 r1
 !s85 0
 31
-Z7 !s108 1699348684.787000
+Z7 !s108 1699703837.397000
 Z8 !s107 d:/altera/quartus ii 13.1/quartus/eda/sim_lib/cycloneive_atoms.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|cycloneive_ver|d:/altera/quartus ii 13.1/quartus/eda/sim_lib/cycloneive_atoms.v|
 !i113 0

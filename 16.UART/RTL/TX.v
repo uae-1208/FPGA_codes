@@ -8,7 +8,8 @@ module TX
     output reg       tx           //串行数据输出端           
 );  
 
-    parameter Baud_9600 = 13'd5207;  //在50MHz的时钟下，计时1/9600s
+    parameter Baud_9600 = 13'd53;//13'd5207;  //在50MHz的时钟下，计时1/9600s
+    parameter Baud_115200 = 13'd434;//在50MHz的时钟下，计时1/115200s
     
 //    reg        en_reg1, en_reg2, en_reg3;  //reg1使异步的使能信号进行同步，reg2和reg3使避免亚稳态
     reg        en_reg;                     //与sys_clk必须是同步的
@@ -46,7 +47,7 @@ module TX
             work_flag <= 1'b0;
         else if(start_flag == 1'b1)
             work_flag <= 1'b1;
-        else if(bit_cnt == 4'd10)            //发送到停止位，发送流程结束，work_flag拉低
+        else if(bit_cnt == 4'd9)            //开始发停止位时，发送流程结束，work_flag拉低
             work_flag <= 1'b0;
         else
             work_flag <= work_flag;
@@ -58,7 +59,7 @@ module TX
         if(rst_n == 1'b0) 
             baud_cnt <= 13'd0;
         else if(work_flag == 1'b1) begin 
-            if(baud_cnt == Baud_9600)
+            if(baud_cnt == Baud_115200)
                 baud_cnt <= 13'd0;
             else 
                 baud_cnt <= baud_cnt + 13'd1;
@@ -74,7 +75,7 @@ module TX
             bit_cnt <= 4'd0;
         else if(work_flag == 1'b0)         //一字节串行数据发送完成，bit_cnt清零
             bit_cnt <= 4'd0;
-        else if(baud_cnt == Baud_9600)  
+        else if(baud_cnt == Baud_115200)  
             bit_cnt <= bit_cnt + 4'd1;
         else   
             bit_cnt <= bit_cnt;
@@ -87,7 +88,7 @@ module TX
             data_reg <= 8'd0;
         else if(start_flag == 1'b1)  
             data_reg <= data_in;
-        else if(baud_cnt == Baud_9600)      
+        else if(baud_cnt == Baud_115200)      
             data_reg <= {1'b0, data_reg[7:1]};
         else   
             data_reg <= data_reg;
@@ -100,9 +101,9 @@ module TX
             tx <= 1'b1;
         else if(start_flag == 1'b1)     //起始位
             tx <= 1'b0;
-        else if((4'd0 <= bit_cnt) && (bit_cnt < 4'd8) && (baud_cnt == Baud_9600)) 
+        else if((4'd0 <= bit_cnt) && (bit_cnt < 4'd8) && (baud_cnt == Baud_115200)) 
             tx <= data_reg[0];
-        else if((bit_cnt == 4'd8) && (baud_cnt == Baud_9600))      //停止位
+        else if((bit_cnt == 4'd8) && (baud_cnt == Baud_115200))      //停止位
             tx <= 1'b1;
         else
             tx <= tx;

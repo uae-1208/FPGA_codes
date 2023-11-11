@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dU:/Projects/FPGA/Examples/16.UART/Project/simulation/modelsim
 valt_bidir_buf
-Z1 !s110 1699348681
+Z1 !s110 1699703834
 !i10b 1
 !s100 a6?6cHeC]_[b_;=i8O1hN3
 IQimU^dk9lLG7]90XQdHRj3
@@ -23,7 +23,7 @@ Z6 OL;L;10.4;61
 r1
 !s85 0
 31
-Z7 !s108 1699348681.744000
+Z7 !s108 1699703834.441000
 Z8 !s107 d:/altera/quartus ii 13.1/quartus/eda/sim_lib/altera_primitives.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|altera_ver|d:/altera/quartus ii 13.1/quartus/eda/sim_lib/altera_primitives.v|
 !i113 0
