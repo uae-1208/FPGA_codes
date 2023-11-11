@@ -8,8 +8,8 @@ module TX
     output reg       tx           //串行数据输出端           
 );  
 
-    parameter Baud_9600 = 13'd53;//13'd5207;  //在50MHz的时钟下，计时1/9600s
-    parameter Baud_115200 = 13'd434;//在50MHz的时钟下，计时1/115200s
+    parameter Baud_9600 = 13'd5207;  //在50MHz的时钟下，计时1/9600s
+    parameter Baud_115200 = 13'd434; //在50MHz的时钟下，计时1/115200s
     
 //    reg        en_reg1, en_reg2, en_reg3;  //reg1使异步的使能信号进行同步，reg2和reg3使避免亚稳态
     reg        en_reg;                     //与sys_clk必须是同步的
