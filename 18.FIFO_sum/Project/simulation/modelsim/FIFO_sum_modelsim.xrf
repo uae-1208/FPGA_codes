@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/UART_TX.v
+source_file = 1, U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/UART_RX.v
+source_file = 1, U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/FIFO_sum.v
+source_file = 1, U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/FIFO_ctrl.v
+source_file = 1, U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo1/FIFO1.qip
+source_file = 1, U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo1/FIFO1.v
+source_file = 1, U:/Projects/FPGA/Examples/18.FIFO_sum/Project/db/FIFO_sum.cbx.xml
+design_name = FIFO_sum
+instance = comp, \busy_flag~output , busy_flag~output, FIFO_sum, 1
+instance = comp, \tx~output , tx~output, FIFO_sum, 1
+instance = comp, \sys_clk~input , sys_clk~input, FIFO_sum, 1
+instance = comp, \rst_n~input , rst_n~input, FIFO_sum, 1
+instance = comp, \rx~input , rx~input, FIFO_sum, 1

@@ -1,0 +1,133 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Full Version"
+
+// DATE "11/24/2023 18:38:26"
+
+// 
+// Device: Altera EP4CE10F17C8 Package FBGA256
+// 
+
+// 
+// This Verilog file should be used for ModelSim (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module FIFO_sum (
+	sys_clk,
+	rst_n,
+	rx,
+	busy_flag,
+	tx);
+input 	sys_clk;
+input 	rst_n;
+input 	rx;
+output 	busy_flag;
+output 	tx;
+
+// Design Ports Information
+// sys_clk	=>  Location: PIN_K11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// rst_n	=>  Location: PIN_N11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// rx	=>  Location: PIN_F5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// busy_flag	=>  Location: PIN_B1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// tx	=>  Location: PIN_C2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("FIFO_sum_min_1200mv_0c_v_fast.sdo");
+// synopsys translate_on
+
+wire \sys_clk~input_o ;
+wire \rst_n~input_o ;
+wire \rx~input_o ;
+wire \busy_flag~output_o ;
+wire \tx~output_o ;
+
+
+// Location: IOOBUF_X0_Y22_N2
+cycloneive_io_obuf \busy_flag~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\busy_flag~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \busy_flag~output .bus_hold = "false";
+defparam \busy_flag~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y22_N16
+cycloneive_io_obuf \tx~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\tx~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \tx~output .bus_hold = "false";
+defparam \tx~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y6_N15
+cycloneive_io_ibuf \sys_clk~input (
+	.i(sys_clk),
+	.ibar(gnd),
+	.o(\sys_clk~input_o ));
+// synopsys translate_off
+defparam \sys_clk~input .bus_hold = "false";
+defparam \sys_clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X30_Y0_N22
+cycloneive_io_ibuf \rst_n~input (
+	.i(rst_n),
+	.ibar(gnd),
+	.o(\rst_n~input_o ));
+// synopsys translate_off
+defparam \rst_n~input .bus_hold = "false";
+defparam \rst_n~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y23_N15
+cycloneive_io_ibuf \rx~input (
+	.i(rx),
+	.ibar(gnd),
+	.o(\rx~input_o ));
+// synopsys translate_off
+defparam \rx~input .bus_hold = "false";
+defparam \rx~input .simulate_z_as = "z";
+// synopsys translate_on
+
+assign busy_flag = \busy_flag~output_o ;
+
+assign tx = \tx~output_o ;
+
+endmodule
