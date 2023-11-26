@@ -40,6 +40,9 @@ module FIFO_ctrl
     end
     
     
+    reg wr_en1;
+    reg wr_en2;
+    
 endmodule
 
 
