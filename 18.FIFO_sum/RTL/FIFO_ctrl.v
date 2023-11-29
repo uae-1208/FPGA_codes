@@ -140,7 +140,9 @@ module FIFO_ctrl
     wire loop_begin;
     assign = fifo1_full & fifo2_full;
     
-    
+    reg dat_reg1;
+    reg dat_reg2;
+    reg dat_reg3;
     
 endmodule
 
