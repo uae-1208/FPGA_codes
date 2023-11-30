@@ -33,14 +33,16 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo2 {U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo2/FIFO2.v}
 vlog -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/RTL {U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/UART_TX.v}
 vlog -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/RTL {U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/UART_RX.v}
 vlog -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/RTL {U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/FIFO_sum.v}
 vlog -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/RTL {U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/FIFO_ctrl.v}
+vlog -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo1 {U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo1/FIFO1.v}
 
-vlog -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/Project/../Sim {U:/Projects/FPGA/Examples/18.FIFO_sum/Project/../Sim/FIFO_TB1.v}
+vlog -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/Project/../Sim {U:/Projects/FPGA/Examples/18.FIFO_sum/Project/../Sim/FIFO_TB2.v}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  FIFO_TB1
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  FIFO_TB2
 
 add wave *
 view structure

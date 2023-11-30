@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Fri Nov 24 18:38:16 2023
+Analysis & Synthesis Status : Successful - Thu Nov 30 19:58:36 2023
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
 Revision Name : FIFO_sum
 Top-level Entity Name : FIFO_sum
 Family : Cyclone IV E
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
-Total registers : 0
+Total logic elements : 256
+    Total combinational functions : 211
+    Dedicated logic registers : 185
+Total registers : 185
 Total pins : 5
 Total virtual pins : 0
-Total memory bits : 0
+Total memory bits : 4,096
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

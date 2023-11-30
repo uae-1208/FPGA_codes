@@ -9,37 +9,81 @@ z2
 cModel Technology
 Z0 dU:/Projects/FPGA/Examples/18.FIFO_sum/Project/simulation/modelsim
 T_opt
-!s110 1700822413
-Vk?0hiB?<Fk8a<0hPZ?dmG3
-04 8 4 work FIFO_TB1 fast 0
-=1-5405db4d15c6-65607d88-a6-5dc
+!s110 1701339136
+V@766j]8OEk4e=:KQ2EC_b1
+04 8 4 work FIFO_TB2 fast 0
+=1-5405db4d15c6-65686000-329-2c80
 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
 n@_opt
 OL;O;10.4;61
-vFIFO_ctrl
-Z1 !s110 1700822405
+vFIFO1
+Z1 !s110 1701339135
 !i10b 1
-!s100 dJMc:Ob8FjPImV@FE<^;=0
-IVkQOm1aHL1QI40SmM7D[E0
+!s100 ^6:mGnkI]jmN8D<zXHFV91
+I6CgzGdz58^V?Qc5S^]N`^3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1700822067
-8U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/FIFO_ctrl.v
-FU:/Projects/FPGA/Examples/18.FIFO_sum/RTL/FIFO_ctrl.v
-L0 1
-Z3 OL;L;10.4;61
+w1700821314
+8U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo1/FIFO1.v
+FU:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo1/FIFO1.v
+Z3 L0 39
+Z4 OL;L;10.4;61
 r1
 !s85 0
 31
-!s108 1700822405.116000
+!s108 1701339135.168000
+!s107 U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo1/FIFO1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo1|U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo1/FIFO1.v|
+!i113 0
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo1 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@f@i@f@o1
+vFIFO2
+Z6 !s110 1701339134
+!i10b 1
+!s100 kA`>hWZHXA1]^Bj6XM3J_2
+I5SLVjoVV4nzlzdLzMbD;J1
+R2
+R0
+w1701082474
+8U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo2/FIFO2.v
+FU:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo2/FIFO2.v
+R3
+R4
+r1
+!s85 0
+31
+!s108 1701339134.656000
+!s107 U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo2/FIFO2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo2|U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo2/FIFO2.v|
+!i113 0
+R5
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/Project/IP_core/fifo2 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@f@i@f@o2
+vFIFO_ctrl
+R1
+!i10b 1
+!s100 IZKb9f?Ld]_lO7^IET_dg1
+I0Y@ZVBUGozb9AlZ2Gzc192
+R2
+R0
+w1701339099
+8U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/FIFO_ctrl.v
+FU:/Projects/FPGA/Examples/18.FIFO_sum/RTL/FIFO_ctrl.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1701339135.067000
 !s107 U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/FIFO_ctrl.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/RTL|U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/FIFO_ctrl.v|
 !i113 0
-Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z5 !s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+Z7 !s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 n@f@i@f@o_ctrl
 vFIFO_sum
-R1
+R6
 !i10b 1
 !s100 _=R5T4@EH>_hEVBNb`Tl]1
 Im3FN6kg=?cnAnkNVG<JC:1
@@ -49,41 +93,41 @@ w1700822140
 8U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/FIFO_sum.v
 FU:/Projects/FPGA/Examples/18.FIFO_sum/RTL/FIFO_sum.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-!s108 1700822404.997000
+!s108 1701339134.967000
 !s107 U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/FIFO_sum.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/RTL|U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/FIFO_sum.v|
 !i113 0
-R4
 R5
+R7
 n@f@i@f@o_sum
-vFIFO_TB1
+vFIFO_TB2
 R1
 !i10b 1
-!s100 hVBkCiB>EADGF67W=Fjmd1
-Ii1d]9S9<]OM4G[ARGT]ab0
+!s100 B10``aCP0PaAU=K>CU=Lo2
+IZG5jN7aG^PP52MDdjQHB52
 R2
 R0
-w1700822239
-8U:/Projects/FPGA/Examples/18.FIFO_sum/Project/../Sim/FIFO_TB1.v
-FU:/Projects/FPGA/Examples/18.FIFO_sum/Project/../Sim/FIFO_TB1.v
+w1701338078
+8U:/Projects/FPGA/Examples/18.FIFO_sum/Project/../Sim/FIFO_TB2.v
+FU:/Projects/FPGA/Examples/18.FIFO_sum/Project/../Sim/FIFO_TB2.v
 L0 3
-R3
+R4
 r1
 !s85 0
 31
-!s108 1700822405.235000
-!s107 U:/Projects/FPGA/Examples/18.FIFO_sum/Project/../Sim/FIFO_TB1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/Project/../Sim|U:/Projects/FPGA/Examples/18.FIFO_sum/Project/../Sim/FIFO_TB1.v|
+!s108 1701339135.268000
+!s107 U:/Projects/FPGA/Examples/18.FIFO_sum/Project/../Sim/FIFO_TB2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/Project/../Sim|U:/Projects/FPGA/Examples/18.FIFO_sum/Project/../Sim/FIFO_TB2.v|
 !i113 0
-R4
+R5
 !s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/Project/../Sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-n@f@i@f@o_@t@b1
+n@f@i@f@o_@t@b2
 vUART_RX
-Z6 !s110 1700822404
+R6
 !i10b 1
 !s100 e>IB6I1QHKnBeSMB7D^S@3
 I8V=f@7<422`lOR2=EbH:00
@@ -93,16 +137,16 @@ w1700816538
 8U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/UART_RX.v
 FU:/Projects/FPGA/Examples/18.FIFO_sum/RTL/UART_RX.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-!s108 1700822404.870000
+!s108 1701339134.867000
 !s107 U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/UART_RX.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/RTL|U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/UART_RX.v|
 !i113 0
-R4
 R5
+R7
 n@u@a@r@t_@r@x
 vUART_TX
 R6
@@ -115,14 +159,14 @@ w1700816546
 8U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/UART_TX.v
 FU:/Projects/FPGA/Examples/18.FIFO_sum/RTL/UART_TX.v
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-!s108 1700822404.740000
+!s108 1701339134.765000
 !s107 U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/UART_TX.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/18.FIFO_sum/RTL|U:/Projects/FPGA/Examples/18.FIFO_sum/RTL/UART_TX.v|
 !i113 0
-R4
 R5
+R7
 n@u@a@r@t_@t@x

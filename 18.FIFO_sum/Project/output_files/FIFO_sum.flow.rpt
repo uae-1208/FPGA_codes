@@ -1,5 +1,5 @@
 Flow report for FIFO_sum
-Fri Nov 24 18:38:26 2023
+Thu Nov 30 19:58:59 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Nov 24 18:38:26 2023       ;
+; Flow Status                        ; Successful - Thu Nov 30 19:58:59 2023       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; FIFO_sum                                    ;
 ; Top-level Entity Name              ; FIFO_sum                                    ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE10F17C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 0 / 10,320 ( 0 % )                          ;
-;     Total combinational functions  ; 0 / 10,320 ( 0 % )                          ;
-;     Dedicated logic registers      ; 0 / 10,320 ( 0 % )                          ;
-; Total registers                    ; 0                                           ;
+; Total logic elements               ; 233 / 10,320 ( 2 % )                        ;
+;     Total combinational functions  ; 211 / 10,320 ( 2 % )                        ;
+;     Dedicated logic registers      ; 169 / 10,320 ( 2 % )                        ;
+; Total registers                    ; 169                                         ;
 ; Total pins                         ; 5 / 180 ( 3 % )                             ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 423,936 ( 0 % )                         ;
+; Total memory bits                  ; 4,096 / 423,936 ( < 1 % )                   ;
 ; Embedded Multiplier 9-bit elements ; 0 / 46 ( 0 % )                              ;
 ; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/24/2023 18:38:15 ;
+; Start date & time ; 11/30/2023 19:58:34 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FIFO_sum            ;
 +-------------------+---------------------+
@@ -75,21 +75,29 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 92384130831814.170082229506956        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 92384130831814.170134551322336        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; FIFO_TB1       ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; FIFO_TB1                              ; --            ; --          ; eda_simulation ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; FIFO_TB2       ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; FIFO_TB2                              ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim (Verilog)                    ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_FILE                  ; ../Sim/FIFO_TB1.v                     ; --            ; --          ; FIFO_TB1       ;
+; EDA_TEST_BENCH_FILE                  ; ../Sim/FIFO_TB2.v                     ; --            ; --          ; FIFO_TB2       ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; FIFO_TB1                              ; --            ; --          ; FIFO_TB1       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; FIFO_TB2                              ; --            ; --          ; FIFO_TB2       ;
 ; EDA_TEST_BENCH_NAME                  ; FIFO_TB1                              ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; FIFO_TB2                              ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1 ms                                  ; --            ; --          ; FIFO_TB1       ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1 ms                                  ; --            ; --          ; FIFO_TB2       ;
 ; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --          ; eda_simulation ;
 ; IP_TOOL_NAME                         ; FIFO                                  ; --            ; --          ; --             ;
+; IP_TOOL_NAME                         ; FIFO                                  ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                      ; 13.1                                  ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                      ; 13.1                                  ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
+; MISC_FILE                            ; IP_core/fifo2/FIFO2_inst.v            ; --            ; --          ; --             ;
 ; MISC_FILE                            ; IP_core/fifo1/FIFO1_inst.v            ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --             ;
 ; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top            ;
@@ -106,12 +114,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:00     ; 1.0                     ; 4614 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:03     ; 1.0                     ; 5333 MB             ; 00:00:03                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4582 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4661 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4552 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:06     ; --                      ; --                  ; 00:00:06                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4647 MB             ; 00:00:03                           ;
+; Fitter                    ; 00:00:08     ; 1.0                     ; 5368 MB             ; 00:00:09                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4598 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4668 MB             ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4547 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:18     ; --                      ; --                  ; 00:00:19                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

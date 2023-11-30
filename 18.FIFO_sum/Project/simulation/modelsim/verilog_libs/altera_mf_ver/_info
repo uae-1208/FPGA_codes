@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dU:/Projects/FPGA/Examples/18.FIFO_sum/Project/simulation/modelsim
 va_graycounter
-Z1 !s110 1700822403
+Z1 !s110 1701339133
 !i10b 1
 !s100 FI?[k<oCFi9HWYigXHGcf0
 IZRE=NY_`COf>6`@JK8Bi_1
@@ -23,7 +23,7 @@ Z6 OL;L;10.4;61
 r1
 !s85 0
 31
-Z7 !s108 1700822402.645000
+Z7 !s108 1701339132.745000
 Z8 !s107 d:/altera/quartus ii 13.1/quartus/eda/sim_lib/altera_mf.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|altera_mf_ver|d:/altera/quartus ii 13.1/quartus/eda/sim_lib/altera_mf.v|
 !i113 0
@@ -209,7 +209,7 @@ R9
 !i113 0
 R10
 valtaccumulate
-Z11 !s110 1700822402
+R1
 !i10b 1
 !s100 U?_9`Xn3WD5_NI?X20iQD0
 ICfDGUC>>9]T>5KdNBl47W3
@@ -329,7 +329,7 @@ R9
 !i113 0
 R10
 vALTERA_DEVICE_FAMILIES
-R11
+Z11 !s110 1701339132
 !i10b 1
 !s100 FhER4>?CTY2IImAQ`W5mU3
 I7fJ]300g:7OCf8Czl7Oa_2
@@ -432,7 +432,7 @@ R9
 !i113 0
 R10
 valtfp_mult
-R11
+R1
 !i10b 1
 !s100 KaM6nc]cEi?0YDMehQ?6@3
 IY_e0]AVVPX4WF12K?Dbo`0
@@ -472,7 +472,7 @@ R9
 !i113 0
 R10
 valtlvds_tx
-R11
+R1
 !i10b 1
 !s100 ;1`3_f``Ne?n3JBo5zU;A0
 I;daYefNdcDL8cn@UANJPW0
@@ -492,7 +492,7 @@ R9
 !i113 0
 R10
 valtmult_accum
-R11
+R1
 !i10b 1
 !s100 SCeEEa1d]?:=lfjQUW6n:3
 IenNAn8WT17fH`>0e[Vf:=2
@@ -512,7 +512,7 @@ R9
 !i113 0
 R10
 valtmult_add
-R11
+R1
 !i10b 1
 !s100 1ZjS@7hDCKmnGKTS^>UR[3
 Ig4I[K?>hQzl1W?O`<0ePf1
@@ -852,7 +852,7 @@ R9
 !i113 0
 R10
 vdcfifo
-R11
+R1
 !i10b 1
 !s100 dbIOE;QgZ7R^lYSn`5_6_1
 I4XjD1X]EKaNzOIE5i=bDR3
@@ -872,7 +872,7 @@ R9
 !i113 0
 R10
 vdcfifo_async
-R11
+R1
 !i10b 1
 !s100 jX;1VVIkhWiH`4C^gg6me3
 I`CdP9^cz6Sz@zRHJS?bm_2
@@ -892,7 +892,7 @@ R9
 !i113 0
 R10
 vdcfifo_dffpipe
-R11
+R1
 !i10b 1
 !s100 ]6e<BMdmCif^6`3Qa1Tdl0
 IzBj2JgAJ[QZ<mNQIbig9k2
@@ -912,7 +912,7 @@ R9
 !i113 0
 R10
 vdcfifo_fefifo
-R11
+R1
 !i10b 1
 !s100 5TzkJd2emHhjiJ@5?TkNP0
 IIzCIDa2QNo0IcmGBj:cXS2
@@ -932,7 +932,7 @@ R9
 !i113 0
 R10
 vdcfifo_low_latency
-R11
+R1
 !i10b 1
 !s100 l@SPj^6hCeA>NS8NWQQ572
 Ic?DB9Oj9MI1PREL5^k2nE2
@@ -952,7 +952,7 @@ R9
 !i113 0
 R10
 vdcfifo_mixed_widths
-R11
+R1
 !i10b 1
 !s100 VPgQkTE860DUFbmGBnbc62
 I[2V5GBPYo:F[lNCDz1K8[0
@@ -972,7 +972,7 @@ R9
 !i113 0
 R10
 vdcfifo_sync
-R11
+R1
 !i10b 1
 !s100 RG:oS1F40NFFOXgL59mz12
 I3HHcC]QFEiDOE@2:]6PBT1
@@ -1032,7 +1032,7 @@ R9
 !i113 0
 R10
 vflexible_lvds_rx
-R11
+R1
 !i10b 1
 !s100 02:Gcb6^@@dZV1TIo<nfW0
 ISZ2V`dFeb1dAA2_R97W>B3
@@ -1052,7 +1052,7 @@ R9
 !i113 0
 R10
 vflexible_lvds_tx
-R11
+R1
 !i10b 1
 !s100 <>;Yld:UUG3iYOl5o=<W<1
 IIYB85:JJ]`n4>9>05?jok2
@@ -1461,7 +1461,7 @@ R9
 !i113 0
 R10
 vstratix_tx_outclk
-R11
+R1
 !i10b 1
 !s100 _UbP_NNjcj1e]_o;QFYB13
 IhfiFTJUFn`8M76^g6JO4O0
@@ -1501,7 +1501,7 @@ R9
 !i113 0
 R10
 vstratixii_lvds_rx
-R11
+R1
 !i10b 1
 !s100 6>addN;Ez_lka]:JHg7?K2
 IC;9;]4k<5U7V:Qg1>8G772
@@ -1521,7 +1521,7 @@ R9
 !i113 0
 R10
 vstratixii_tx_outclk
-R11
+R1
 !i10b 1
 !s100 Y8hf6VNAU>J_?4L=a^=<M3
 I`ZW5A8C02G;^]B@zXj6Y=2
@@ -1541,7 +1541,7 @@ R9
 !i113 0
 R10
 vstratixiii_lvds_rx
-R11
+R1
 !i10b 1
 !s100 1OHER8A6UGf^0PJj^2zgc3
 IPncXSHz8aT8CPcZgCBFz31
@@ -1561,7 +1561,7 @@ R9
 !i113 0
 R10
 vstratixiii_lvds_rx_channel
-R11
+R1
 !i10b 1
 !s100 ho8;NC0RTagzKBj<<FO;m0
 IUW2hK5?o`lgbeFLaM6SIz1
@@ -1581,7 +1581,7 @@ R9
 !i113 0
 R10
 vstratixiii_lvds_rx_dpa
-R11
+R1
 !i10b 1
 !s100 gRfz=KS_o>1GS:DRM0UF]1
 I2U]DF40DFCh17lU3`z@OH3
@@ -1601,7 +1601,7 @@ R9
 !i113 0
 R10
 vstratixv_local_clk_divider
-R11
+R1
 !i10b 1
 !s100 L0`K5<5Xfg84YiQMQ0WKk2
 I@I3OU74P2]6FVM16:N3DG0
