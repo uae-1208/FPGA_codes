@@ -1,0 +1,167 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/Projects/FPGA/Examples/19.Flash/BE/Project/simulation/modelsim
+T_opt
+!s110 1701779850
+VJ3T@7YGeC71Zc8beh:Y6C1
+04 5 4 work BE_TB fast 0
+=1-5405db4d15c6-656f198a-9-54b8
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vacdc_check
+Z1 !s110 1701779848
+!i10b 1
+!s100 cJo0:`G`O6[JYNd=bbc4<3
+IHn5IQF[5b69[Nb^?kEfQ:3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1640252100
+8U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/acdc_check.v
+FU:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/acdc_check.v
+Z4 L0 20
+Z5 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1701779848.481000
+!s107 U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/parameter.v|U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/acdc_check.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12|U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/acdc_check.v|
+!i113 0
+Z6 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 !s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vBE
+R1
+!i10b 1
+!s100 [_R@2<_a?`Q`iQan:Vgd;3
+I@0`0?iRPjkm;fnmh<8lhb0
+R2
+R0
+w1701779440
+8U:/Projects/FPGA/Examples/19.Flash/BE/RTL/BE.v
+FU:/Projects/FPGA/Examples/19.Flash/BE/RTL/BE.v
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1701779848.255000
+!s107 U:/Projects/FPGA/Examples/19.Flash/BE/RTL/BE.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/19.Flash/BE/RTL|U:/Projects/FPGA/Examples/19.Flash/BE/RTL/BE.v|
+!i113 0
+R6
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/19.Flash/BE/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@b@e
+vBE_TB
+R1
+!i10b 1
+!s100 =966A=;N8K]nFH`T466jH3
+IdJmhGl]^J3fUnXX;KHgm83
+R2
+R0
+w1701779841
+8U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/BE_TB.v
+FU:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/BE_TB.v
+L0 3
+R5
+r1
+!s85 0
+31
+!s108 1701779848.372000
+!s107 U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/BE_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim|U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/BE_TB.v|
+!i113 0
+R6
+!s92 -vlog01compat -work work +incdir+U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@b@e_@t@b
+vinternal_logic
+R1
+!i10b 1
+!s100 [DQ<Q>;C^HP1n=Hbmmb>;2
+I[4XQHz8Im4eoXg[@bBgED0
+R2
+R0
+R3
+8U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/internal_logic.v
+FU:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/internal_logic.v
+R4
+R5
+r1
+!s85 0
+31
+!s108 1701779848.699000
+!s107 U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/parameter.v|U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/internal_logic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12|U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/internal_logic.v|
+!i113 0
+R6
+R7
+vm25p16
+R1
+!i10b 1
+!s100 n20e5GIPRCVUWOcS18Kze1
+IX=5N64F2nfe4U<cDlEZfa2
+R2
+R0
+R3
+8U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/M25p16.v
+FU:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/M25p16.v
+R4
+R5
+r1
+!s85 0
+31
+!s108 1701779848.592000
+!s107 U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/parameter.v|U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/M25p16.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12|U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/M25p16.v|
+!i113 0
+R6
+R7
+vm25p16_driver
+R1
+!i10b 1
+!s100 zEY@lnjX>J^[lac]kNJlA1
+I;?cTVakl5;_^1W25OzB1<3
+R2
+R0
+R3
+8U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/m25p16_driver.v
+FU:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/m25p16_driver.v
+R4
+R5
+r1
+!s85 0
+31
+!s108 1701779848.816000
+!s107 U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/parameter.v|U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/m25p16_driver.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12|U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/m25p16_driver.v|
+!i113 0
+R6
+R7
+vmemory_access
+R1
+!i10b 1
+!s100 ?_lk33C0^;dg@25G5Ead?3
+I=8[X4LRQzCEnYDV^9QSH90
+R2
+R0
+R3
+8U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/memory_access.v
+FU:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/memory_access.v
+R4
+R5
+r1
+!s85 0
+31
+!s108 1701779848.932000
+!s107 U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/parameter.v|U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/memory_access.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12|U:/Projects/FPGA/Examples/19.Flash/BE/Project/../Sim/M25P16_VG_V12/memory_access.v|
+!i113 0
+R6
+R7
