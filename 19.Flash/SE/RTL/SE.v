@@ -1,4 +1,4 @@
-module BE 
+module SE 
 (
     input  wire   sys_clk, 
     input  wire   rst_n,     //异步复位 
@@ -9,7 +9,7 @@ module BE
 );  
 
     parameter WREN_instr = 8'h06;
-    parameter BE_instr   = 8'hc7;
+    parameter SE_instr   = 8'hd8;
     
     reg touch_reg1, touch_reg2;
     reg touch_fall;                 //判断触摸按键是否被按下,按一下按键则模块工作一次  
@@ -18,8 +18,8 @@ module BE
     reg [2:0] c16_cnt;              //阶段计数器，每次total_cnt计数到15时，递增
     reg [1:0] clk_cnt;              //辅助sys_clk四分频
     reg [2:0] bit_cnt;              //记录已经发送的bit数目
-    reg [7:0] WREN_reg;             //辅助发送WREN指令
-    reg [7:0] BE_reg;               //辅助发送BE指令
+    reg [7:0] inst_reg;             //辅助发送WREN指令
+
     
     
     always @(posedge sys_clk, negedge rst_n) begin
