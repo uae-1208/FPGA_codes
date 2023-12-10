@@ -1,10 +1,10 @@
 `timescale  1ns/1ns
 
-module BE_TB();
+module SE_TB();
 
     reg       sys_clk;
     reg       rst_n;
-    reg       touch_key;
+    reg       ena_rise;
     wire      MOSI;
     wire      cs_n;
     wire      sck;
@@ -17,37 +17,39 @@ module BE_TB();
     initial begin
         sys_clk   <= 1'b1;
         rst_n     <= 1'b0;
-        touch_key <= 1'b1;
+        ena_rise <= 1'b1;
         #20;
         rst_n <= 1'b1;
-        //第一次BE
+        
+        //第一次SE
         #500;
-        touch_key <= 1'b0;
+        ena_rise <= 1'b0;
         #500;
-        touch_key <= 1'b1;
-        //第一次BE未完成再按下触摸按键，观察是否会被打断
+        ena_rise <= 1'b1;
+        //第一次SE未完成再按下触摸按键，观察是否会被打断
         #800;
-        touch_key <= 1'b0;
+        ena_rise <= 1'b0;
         #500;
-        touch_key <= 1'b1;
-        //第一次BE未完成再按下触摸按键，观察模块是否可以连续BE
-        #45_000;
-        touch_key <= 1'b0;
+        ena_rise <= 1'b1;
+        
+        //第二次SE
+        #3_000;
+        ena_rise <= 1'b0;
         #500;
-        touch_key <= 1'b1;
+        ena_rise <= 1'b1;
     end
 
     defparam memory.mem_access.initfile = "initmemory.txt";
 
 
-    BE  BE
+    SE  SE
     (
-        .sys_clk    (sys_clk   ), 
-        .rst_n      (rst_n     ),      
-        .touch_key  (touch_key ),  
-        .MOSI       (MOSI      ),  
-        .cs_n       (cs_n      ),  
-        .sck        (sck       )  
+        .sys_clk    (sys_clk  ), 
+        .rst_n      (rst_n    ),      
+        .ena_rise   (ena_rise ),  
+        .MOSI       (MOSI     ),  
+        .cs_n       (cs_n     ),  
+        .sck        (sck      )  
     ); 
 
     m25p16  memory
